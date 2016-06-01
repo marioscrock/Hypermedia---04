@@ -23,15 +23,47 @@
     <div>
       <h1> </h1>
     </div>
-
+      
     <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-header"> 
-        <a class="navbar-brand" href="#">
-                <img src="img/white_logo.png" height="48" alt="Brand" >
+        <div class="container-fluid">
+        <div class="navbar-header"> 
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="pull-left" href="#">
+                    <img src="img/white_logo.png" href="/index.html" height="48" alt="Brand" >
             </a>
-    </div>
-      <div class="container">
-      </div>
+        </div>
+            
+           <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li id="prodotti" class="dropdown" style="transform: translateY(-3px);">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODOTTI <span id="prodottiArrow" class="glyphicon glyphicon-chevron-right navbarArrow"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">CATEGORIE Prodotti</a></li>
+                  <li><a href="#" style ="color:#fe000d;" >PROMOZIONI</a></li>
+                </ul>
+                </li>
+                <li id="serviziSL" class="dropdown" style="transform: translateY(-3px);">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVIZI SMART LIFE <span id="serviziArrow" class="glyphicon glyphicon-chevron-right navbarArrow"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">CATEGORIE Servizi Smart Life</a></li>
+                  <li><a href="#" style ="color:#fe000d;" >PROMOZIONI</a></li>
+                </ul>
+              </li>
+              <li id="assistenza" class="dropdown" style="transform: translateY(-3px);">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVIZIO ASSISTENZA <span id="assistenzaArrow" class="glyphicon glyphicon-chevron-right navbarArrow"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">CATEGORIE Servizi Assistenza</a></li>
+                  <li><a href="#" style ="color:#fe000d;" >HIGHLIGHTS</a></li>
+                </ul>
+              </li>
+            </ul>
+            </div>
+        </div>
     </nav>
 
     <div class="jumbotron">
@@ -95,8 +127,27 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+    <script src="js/bootstrap.js"></script>
+    
+    <script type="text/javascript">
+    $('#prodotti').click(function(){
+        $('#prodottiArrow').toggleClass("down");
+        $('#serviziArrow').toggleClass("down", false);
+        $('#assistenzaArrow').toggleClass("down", false);
+        });
+    $('#serviziSL').click(function(){
+        $('#prodottiArrow').toggleClass("down", false);
+        $('#serviziArrow').toggleClass("down");
+        $('#assistenzaArrow').toggleClass("down", false);
+        });
+    $('#assistenza').click(function(){
+        $('#prodottiArrow').toggleClass("down", false);
+        $('#serviziArrow').toggleClass("down", false);
+        $('#assistenzaArrow').toggleClass("down");
+        });
+    </script>
+
   </body>
 </html>
