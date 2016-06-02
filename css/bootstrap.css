@@ -3517,7 +3517,6 @@ tbody.collapse.in {
 .dropup,
 .dropdown {
     
-    transform: translateY(-3px);
   position: relative;
 }
 .dropdown-toggle:focus {
