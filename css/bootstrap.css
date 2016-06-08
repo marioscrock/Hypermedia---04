@@ -6793,6 +6793,12 @@ button.close {
     float: none;
     vertical-align: top;
 }
+.paragraph-blue{
+    color: white;
+    background-color: #0b3d86;
+    padding: 10px;
+    
+}
 
 
 /*# sourceMappingURL=bootstrap.css.map */
