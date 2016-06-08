@@ -1452,7 +1452,7 @@ dt {
 dd {
   margin-left: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .dl-horizontal dt {
     float: left;
     width: 160px;
@@ -3530,11 +3530,11 @@ tbody.collapse.in {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
+  min-width: 0px !important;
   padding: 5px 0;
   margin: 2px 0 0;
   font-size: 14px;
-  text-align: left;
+  text-align: -webkit-center;
   list-style: none;
   background-color: #fff;
   -webkit-background-clip: padding-box;
@@ -3638,7 +3638,7 @@ tbody.collapse.in {
   bottom: 100%;
   margin-bottom: 2px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .navbar-right .dropdown-menu {
     right: 0;
     left: auto;
@@ -4175,12 +4175,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .navbar {
     border-radius: 4px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .navbar-header {
     float: left;
   }
@@ -4197,7 +4197,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -4237,7 +4237,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: -15px;
   margin-left: -15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
@@ -4250,7 +4250,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   z-index: 1000;
   border-width: 0 0 1px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .navbar-static-top {
     border-radius: 0;
   }
@@ -4262,7 +4262,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   left: 0;
   z-index: 1030;
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     border-radius: 0;
@@ -4290,7 +4290,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand > img {
   display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: -70px;
@@ -4320,7 +4320,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .navbar-toggle {
     display: none;
   }
@@ -4333,7 +4333,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-bottom: 10px;
   line-height: 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1003px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -4356,7 +4356,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-image: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .navbar-nav {
       
     float: none;
@@ -4366,7 +4366,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-      font-style: oblique;
+    font-style: normal;
     font-size: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -4433,7 +4433,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     top: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1003px) {
   .navbar-form .form-group {
     margin-bottom: 5px;
   }
@@ -4441,7 +4441,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-bottom: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .navbar-form {
     width: auto;
     padding-top: 0;
@@ -4481,14 +4481,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .navbar-text {
     float: left;
     margin-right: 15px;
     margin-left: 15px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1004px) {
   .navbar-left {
     float: left !important;
   }
@@ -4555,7 +4555,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #555;
   background-color: #e7e7e7;
 }
-@media (max-width: 767px) {
+@media (max-width: 1003px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #777;
   }
@@ -4598,7 +4598,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse {
   background-color: #0b3d86;
-  border-color: #080808;
+  border-color: #0A2650;
 }
 .navbar-inverse .navbar-brand {
   color: #9d9d9d;
@@ -4612,6 +4612,8 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #9d9d9d;
 }
 .navbar-inverse .navbar-nav > li > a {
+  padding-left: 30px;
+  padding-right: 30px;
   color: #fff;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -4643,7 +4645,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: #101010;
+  border-color: #fff;
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
@@ -4651,7 +4653,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #fff;
   background-color: #fe000d;
 }
-@media (max-width: 767px) {
+@media (max-width: 1003px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #080808;
   }
@@ -4659,7 +4661,8 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     background-color: #080808;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-    color: #fff;
+    background-color: #fff;
+    color: #0b3d86;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -6782,8 +6785,14 @@ button.close {
 
 .down{
     color: white;
-    transform: rotate(90deg);
-    
+    transform: rotate(90deg); 
 }
+
+#footerEl{
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
 
 /*# sourceMappingURL=bootstrap.css.map */
