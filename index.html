@@ -16,75 +16,93 @@
     <!-- Custom styles for this template -->
     <link href="css/jumbotron.css" rel="stylesheet">
     <link href="css/sticky-footer.css" rel="stylesheet">
-      
-      
-    <link href="css/navbar.css" rel="stylesheet">
   </head>
 
   <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-header"> 
-        <a class="navbar-brand" href="#">
-                <img src="img/white_logo.png" height="48" alt="Brand" >
-            </a>
+      
+    <div>
+      <h1> </h1>
     </div>
-      <div class="container">
-           <div  class="navbar-collapse collapse">
+      
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+        <div class="navbar-header"> 
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="pull-left" href="#">
+                    <img src="img/white_logo.png" href="/index.html" height="48" alt="Brand" >
+            </a>
+        </div>
+            
+           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li  class="dropdown" style="transform: translateY(-3px);">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown  <span class="glyphicon glyphicon-chevron-right" style="color:#fe000d;"></span></a>
+              <li id="prodotti" class="dropdown" style="transform: translateY(-3px);">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODOTTI <span id="prodottiArrow" class="glyphicon glyphicon-chevron-right navbarArrow"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
+                  <li><a href="#">CATEGORIE Prodotti</a></li>
+                  <li><a href="#" style ="color:#fe000d;" >PROMOZIONI</a></li>
+                </ul>
+                </li>
+                <li id="serviziSL" class="dropdown" style="transform: translateY(-3px);">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVIZI SMART LIFE <span id="serviziArrow" class="glyphicon glyphicon-chevron-right navbarArrow"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">CATEGORIE Servizi Smart Life</a></li>
+                  <li><a href="#" style ="color:#fe000d;" >PROMOZIONI</a></li>
+                </ul>
+              </li>
+              <li id="assistenza" class="dropdown" style="transform: translateY(-3px);">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVIZIO ASSISTENZA <span id="assistenzaArrow" class="glyphicon glyphicon-chevron-right navbarArrow"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">CATEGORIE Servizi Assistenza</a></li>
+                  <li><a href="#" style ="color:#fe000d;" >HIGHLIGHTS</a></li>
                 </ul>
               </li>
             </ul>
-          </div><!--/.nav-collapse -->
-      </div>
+            </div>
+        </div>
     </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-    
-   <div class="container">
-       <div id = "bloc1">
-        <h1 style=" color:white;">PER ESSERE CONNESSI ALLA VITA</h1>
-        <h2 style=" color:#fe000d;">SEMPRE. OVUNQUE. MEGLIO</h2>
-       </div>
-       
-       <div id = "bloc2">
-            <img src="img/home.jpg" alt="Home_img" >
-       </div>
-       
-    </div>
+        <div class="container">
+            
+            <div class="col-md-4 pull-left">
+                <h1 style=" color:white;">PER ESSERE CONNESSI ALLA VITA</h1>
+                <h1 style=" color:#fe000d;">SEMPRE. OVUNQUE. MEGLIO.</h1>
+            </div>
+            
+            <div class="col-md-8 pull-right">
+                    <img class="jumbotronwidth" id="jumbotronImg" alt=" " src="img/home.jpg">
+            </div>
+
+            
+        </div>
      
-      </div>
+    </div>
 
     <div class="container">
-      <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>Heading</h2>
+          <h2>Vieni a scoprire i nostri prodotti</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
+          <h2>TIM Music un mondo da ascoltare</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
+          <h2>Nuovo iPad, scoprilo con Tim</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Tim Tag, controlla il tuo cucciolo</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
       </div>
@@ -95,7 +113,13 @@
       
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
       </div>
     </footer>
 
@@ -103,8 +127,27 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+    <script src="js/bootstrap.js"></script>
+    
+    <script type="text/javascript">
+    $('#prodotti').click(function(){
+        $('#prodottiArrow').toggleClass("down");
+        $('#serviziArrow').toggleClass("down", false);
+        $('#assistenzaArrow').toggleClass("down", false);
+        });
+    $('#serviziSL').click(function(){
+        $('#prodottiArrow').toggleClass("down", false);
+        $('#serviziArrow').toggleClass("down");
+        $('#assistenzaArrow').toggleClass("down", false);
+        });
+    $('#assistenza').click(function(){
+        $('#prodottiArrow').toggleClass("down", false);
+        $('#serviziArrow').toggleClass("down", false);
+        $('#assistenzaArrow').toggleClass("down");
+        });
+    </script>
+
   </body>
 </html>
