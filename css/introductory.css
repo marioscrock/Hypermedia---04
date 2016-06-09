@@ -1,0 +1,62 @@
+.title img {
+  float: left;
+	width: 58px;
+  height: 44px;
+	margin-right: 10px;
+}
+
+.title h1 {
+  position: relative;
+}
+
+.sectionTitle{
+		font-weight: bold;
+    color: #fe000d;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.redDivider{
+    background-color: #fe000d;
+    height: 4px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-top: 10px; 
+}
+
+.item{
+		font-size: 18px;
+}
+
+.itemPrice{
+		color: #fe000d;
+}
+
+.tile{
+		border-color: #0b3d86;
+		border-style: solid;
+		border-width: 3px;
+		border-radius: 10px;
+		padding: 15px 15px 15px 15px;
+		margin: 2px 2px 2px 2px;
+}
+
+#btn-detail {
+    background-color: #0b3d86;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+    
+}
+
+@media (min-width: 768px) {
+    
+}
+
+@media (min-width: 1200px) {
+    
+}
