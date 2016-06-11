@@ -1,8 +1,8 @@
 .title img {
   float: left;
-	width: 58px;
+  width: 58px;
   height: 44px;
-	margin-right: 10px;
+  margin-right: 10px;
 }
 
 .title h1 {
@@ -10,7 +10,7 @@
 }
 
 .sectionTitle{
-		font-weight: bold;
+    font-weight: bold;
     color: #fe000d;
     font-size: 40px;
     margin-bottom: 10px;
