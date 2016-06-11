@@ -6793,17 +6793,5 @@ button.close {
     float: none;
     vertical-align: top;
 }
-.paragraph-blue{
-    color: white;
-    background-color: #0b3d86;
-    padding: 10px;
-    
-}
-.rowt{
-    margin-top: 60px;
-    margin-bottom: -10px;
-}
-.rowl{
-    padding: 3px;
-}
+
 /*# sourceMappingURL=bootstrap.css.map */
