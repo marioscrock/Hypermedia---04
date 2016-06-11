@@ -10,6 +10,7 @@
     <title>Tim WebSite - Hypermedia Project HYP-04</title>
       
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
     <link href="css/jumbotron.css" rel="stylesheet">
     <link href="css/sticky-footer.css" rel="stylesheet">
   </head>
@@ -39,91 +40,106 @@
               <li id="prodotti" class="dropdown" style="transform: translateY(-3px);">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODOTTI <span id="prodottiArrow" class="glyphicon glyphicon-chevron-right navbarArrow"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">CATEGORIE Prodotti</a></li>
-                  <li><a href="#" style ="color:#fe000d;" >PROMOZIONI</a></li>
+                  <li><a href="/categorie-prodotti.html">CATEGORIE Prodotti</a></li>
+                  <li><a href="/promozioni-prodotti.html" style ="color:#fe000d;" >PROMOZIONI</a></li>
                 </ul>
                 </li>
                 <li id="serviziSL" class="dropdown" style="transform: translateY(-3px);">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVIZI SMART LIFE <span id="serviziArrow" class="glyphicon glyphicon-chevron-right navbarArrow"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">CATEGORIE Servizi Smart Life</a></li>
-                  <li><a href="#" style ="color:#fe000d;" >PROMOZIONI</a></li>
+                  <li><a href="/categorie-servizi.html">CATEGORIE Servizi Smart Life</a></li>
+                  <li><a href="/promozioni-servizi.html" style ="color:#fe000d;" >PROMOZIONI</a></li>
                 </ul>
               </li>
               <li id="assistenza" class="dropdown" style="transform: translateY(-3px);">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVIZIO ASSISTENZA <span id="assistenzaArrow" class="glyphicon glyphicon-chevron-right navbarArrow"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">CATEGORIE Servizi Assistenza</a></li>
-                  <li><a href="#" style ="color:#fe000d;" >HIGHLIGHTS</a></li>
+                  <li><a href="/categorie-assistenza.html">CATEGORIE Servizi Assistenza</a></li>
+                  <li><a href="/highlights-assistenza.html" style ="color:#fe000d;" >HIGHLIGHTS</a></li>
                 </ul>
               </li>
             </ul>
             </div>
         </div>
     </nav>
-
-    <div class="jumbotron">
-        <div class="container">
-            
-            <div class="col-md-4 pull-left">
-                <h1 style=" color:white;">PER ESSERE CONNESSI ALLA VITA</h1>
-                <h1 style=" color:#fe000d;">SEMPRE. OVUNQUE. MEGLIO.</h1>
-            </div>
-            
-            <div class="col-md-8 pull-right">
-                    <img class="jumbotronwidth" id="jumbotronImg" alt=" " src="img/home.jpg">
-            </div>
-
-            
-        </div>
-     
-    </div>
     
-    
-    <div class ="col-md-12">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="col-md-6">
-              <img class="img-responsive pull-top" alt="" src="img/iphone6.jpg">
-              <h2>Vieni a scoprire i nostri prodotti</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    <div class="jumbotron jumb-image">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <h1 style="color:white; text-shadow: 2px 1px 6px #0b3d86;">PER ESSERE CONNESSI ALLA VITA</h1>
+                <h1 style="color:#fe000d; text-shadow: 2px 1px 6px #0b3d86;">SEMPRE. OVUNQUE. MEGLIO.</h1>
             </div>
-            <div class="col-md-6">
-              <img class="img-responsive pull-top" alt=" " src="img/timmusic.jpg">
-              <h2>TIM Music un mondo da ascoltare</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-           </div>
-        </div>
-        <div class="col-md-6">
-            <div class="col-md-6">
-              <img class="img-responsive pull-top" alt=" " src="img/ipad-pro.png">
-              <h2>Nuovo iPad, scoprilo con Tim</h2>
-              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-6">
-              <img class="img-responsive pull-top" alt=" " src="img/tim-smart-life.jpg">
-              <h2>Tim Tag, controlla il tuo cucciolo</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <div class="col-lg-8 col-md-8">
+                <img class="jumbotronwidth img-responsive" id="jumbotronImg" alt=" " src="img/home.jpg">
             </div>
           </div>
       </div>
-     </div>
+    </div>
+    
+    <div class ="col-md-12">
+      <div class="row">
+            <div class="col-md-3">
+              <div class="thumbnail">
+                  <img alt="" src="img/iphone6.jpg">
+                  <div class="caption">
+                    <h3 style="text-align: center;">Vieni a scoprire<br>i nostri prodotti</h3>
+                    <p style="text-align: justify; text-justify: inter-word;"> Acquista smartphone, telefoni di casa e cellulari online con TIM: per te un’ampia selezione dei device più innovativi e la consegna è sempre gratuita!Scegli il tuo smartphone preferito tra iPhone Apple, Blackberry, smartphone Samsung, LG, Nokia e di tanti altri brand.
+                      <br><strong>Vuoi conoscere le promozioni in corso e le offerte imperdibili?</strong><br>Visita l’area Outlet e acquista i prodotti migliori in offerta speciale!</p>
+                    <p class="button-home"><a href="#" class="btn btn-default" role="button">Scopri!</a></p>
+                  </div>
+              </div>
+           </div>
+           <div class="col-md-3">
+              <div class="thumbnail">
+                  <img alt="" src="img/timmusic.jpg">
+                  <div class="caption">
+                    <h3 style="text-align: center;">TIM Music<br>un mondo da ascoltare</h3>
+                    <p style="text-align: justify; text-justify: inter-word;">Con TIMmusic puoi ascoltare <strong>musica in streaming senza limiti di tempo</strong> scegliendo da un vastissimo catalogo di milioni di brani musicali nazionali e internazionali di ogni genere, sempre aggiornato con le ultime uscite discografiche. <br> TIMmusic <strong>ti consente anche di creare e salvare le tue playlist personali</strong> o di ascoltare quelle suggerite da Dj e artisti famosi in esclusiva per te. </p>
+                    <p class="button-home"><a href="#" class="btn btn-default" role="button">Scopri!</a></p>
+                  </div>
+              </div>
+           </div>
+            <div class="col-md-3">
+              <div class="thumbnail">
+                  <img alt="" src="img/ipad-pro.png">
+                  <div class="caption">
+                    <h3 style="text-align: center;">Nuovo iPad,<br> scoprilo con Tim</h3>
+                    <p style="text-align: justify; text-justify: inter-word;">Non è solo l’iPad di ultima generazione. <br>È una visione senza compromessi: un nuovo modo di immaginare il personal computer di oggi. <br>iPad Pro ti dà una potenza che surclassa la maggior parte dei PC portatili, e trasforma anche i lavori più complessi in gesti semplici e immediati come toccare, sfiorare o disegnare. <strong>In una parola? Super.</strong><br>Scoprilo con TIM!</p>
+                    <p class="button-home"><a href="#" class="btn btn-default" role="button">Scopri!</a></p>
+                  </div>
+              </div>
+           </div>
+           <div class="col-md-3">
+              <div class="thumbnail">
+                  <img alt="" src="img/tim-smart-life.jpg">
+                  <div class="caption">
+                    <h3 style="text-align: center;">Tim Tag<br>controlla il tuo cucciolo</h3>
+                    <p style="text-align: justify; text-justify: inter-word;">TIMTag è il dispositivo che ti informa sulla <strong>posizione del tuo amico a quattro zampe e delle cose a te più care.</strong> Segui in tempo reale i suoi spostamenti sul tuo smartphone senza perderlo mai di vista. <br><br>Con TIMTag hai un dispositivo di localizzazione GPS di ultima generazione, con 12 mesi di servizio TIMTag e una TIM Card inclusi e un' App dedicata intuitiva e semplice da utilizzare!</p>
+                    <p class="button-home"><a href="#" class="btn btn-default" role="button">Scopri!</a></p>
+                  </div>
+              </div>
+           </div>
+      </div>
+    </div>
       
     <div class ="col-md-12" style="margin-bottom: 80px;"></div>
       
     <footer class="footer">
-      <div class="container">
-        <h4 class="col-md-4">Chi Siamo</h4>
-        <h4 class="col-md-4">Il Gruppo</h4>
-        <h4 class="col-md-4">Contatti</h4>
-      </div>
-      <div class="col-md-2 pull-right">
-          <img class="img-responsive pull-right" width=100% alt=" " src="img/social_icons.png">
-      </div>
+      
+          <div class="container-fluid" style="height: inherit">
+            <div class= "row" style="height: inherit">
+              <div class="col-sm-3">
+              </div>
+              <h4 class="col-sm-2 col-xs-4 text-Footer"><a href="/chi-siamo.html" style="color:#0b3d86">Chi Siamo</a></h4>
+              <h4 class="col-sm-2 col-xs-4 text-Footer">Il Gruppo</h4>
+              <h4 class="col-sm-2 col-xs-4 text-Footer"><a href="/contatti.html" style="color:#0b3d86">Contatti</a></h4>
+              <div class="col-sm-3">
+                  <img class="pull-right img-footer" height="30" alt=" " src="img/social_icons.png">
+              </div>
+            </div>
+          </div>
+        
     </footer>
 
 
@@ -136,18 +152,6 @@
     
     <script type="text/javascript">
     $(function(){
-        /*
-        $('#navbar').on("click","li", function(){
-            $('#navbar span').toggleClass('down',false);
-            $(this).find('span').toggleClass('down');
-        });
-        $(document).click(function(){
-            $('#navbar span').toggleClass('down',false);
-        });
-        $("#dropdown").click(function(e){
-        e.stopPropagation();
-        });
-        */
         $('#prodotti').click(function(){
             $('#prodottiArrow').toggleClass("down");
             $('#serviziArrow').toggleClass("down", false);
