@@ -6799,6 +6799,11 @@ button.close {
     padding: 10px;
     
 }
-
-
+.rowt{
+    margin-top: 60px;
+    margin-bottom: -10px;
+}
+.rowl{
+    padding: 3px;
+}
 /*# sourceMappingURL=bootstrap.css.map */
