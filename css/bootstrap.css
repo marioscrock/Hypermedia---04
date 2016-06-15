@@ -6774,5 +6774,24 @@ button.close {
     display: none !important;
   }
 }
+@media(max-width: 767px){
+  .text-Footer{
+    font-size: 12px;
+  }
+  .img-footer{
+    visibility: hidden;
+  }
+}
+
+.navbarArrow {
+  color: #fe000d; 
+}
+
+.down {
+  color: white;
+  transform: rotate(90deg);
+}
+
+}
 
 /*# sourceMappingURL=bootstrap.css.map */
