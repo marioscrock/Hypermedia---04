@@ -6773,7 +6773,7 @@ button.close {
   .hidden-print {
     display: none !important;
   }
-}
+  
 @media(max-width: 767px){
   .text-Footer{
     font-size: 12px;
