@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/introductory.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <title>Form Acquisto</title>
+    
+  </head>
+
+  <body>
+    
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            
+            <div class="title">
+                <img src="img/formIcon.png">
+                <h1 class="sectionTitle">FORM ACQUISTO</h1>
+            </div>
+            <div class="redDivider"></div>
+      
+            <div class="col-md-8">
+              <h3 style="color:#0b3d86">COMPILA IL MODULO INSERENDO I TUOI DATI</h3>
+              <p>Verrai contattato al più presto da un nostro operatore per procedere al completamento dell'acquisto. Potrai successivamente
+              comodamente ritirare il tuo prodotto in uno dei nostri punti vendita sparsi sul territorio nazionale.</p>
+            </div>
+    
+  
+    <div class="row"> 
+          <div class="col-lg-6">
+
+            <form class="form-horizontal">
+            <fieldset>
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">Nome</label>  
+              <div class="col-md-4">
+                <input id="textinput" name="textinput" type="text" placeholder="nome" class="form-control input-md" required="">
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">Cognome</label>  
+              <div class="col-md-4">
+              <input id="textinput" name="textinput" type="text" placeholder="cognome" class="form-control input-md" required="">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="prependedtext">Numero di Telefono</label>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <span class="input-group-addon">+39</span>
+                  <input id="prependedtext" name="prependedtext" class="form-control" placeholder="" type="text" required="">
+                </div>
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">E-mail</label>  
+                <div class="col-md-4">
+                  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+                </div>
+              </div>
+
+              <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textarea">Aggiungi Informazioni</label>
+              <div class="col-md-8">                     
+                <textarea class="form-control" id="textarea" name="textarea">Informazioni aggiuntive (es. configurazione prodotto desiderata)</textarea>
+              </div>
+            </div>
+
+            </fieldset>
+            </form>
+          </div>
+
+
+          <div class="col-lg-6">
+
+
+            <form class="form-horizontal">
+            <fieldset>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="selectbasic">Numero di prodotti</label>
+              <div class="col-md-4">
+                <select id="selectbasic" name="selectbasic" class="form-control">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="selectbasic">Ora</label>
+              <div class="col-md-4">
+                <select id="selectbasic" name="selectbasic" class="form-control">
+                  <option value="1">9-12</option>
+                  <option value="2">14-17</option>
+                  <option value="3">17-20</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="selectbasic">Data</label>
+              <div class="col-md-4">
+                <p style="transform: translateY(3px);"><input type="date" value="SEND"></p>
+              </div>
+            </div>
+
+            <!-- Button (Double) -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="button1id">Form</label>
+              <div class="col-md-8">
+                <button id="button1id" name="button1id" class="btn btn-success">Invia Form</button>
+                <button id="button2id" name="button2id" class="btn btn-inverse">Ritorna alla scheda prodotto</button>
+              </div>
+            </div>
+
+            </fieldset>
+            </form>
+          </div>
+        </div>
+    </div>
+
+    <script src="/js/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="/css/bootstrap.css"></script>
+  </body>
+</html>
+
+        
+

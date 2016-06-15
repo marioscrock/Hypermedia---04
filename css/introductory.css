@@ -1,16 +1,19 @@
 .title img {
   float: left;
-	width: 58px;
-  height: 44px;
-	margin-right: 10px;
+  margin-right: 10px;
 }
 
 .title h1 {
   position: relative;
 }
 
+.titleIcon{
+	width: 58px;
+  height: 44px;
+}
+
 .sectionTitle{
-		font-weight: bold;
+    font-weight: bold;
     color: #fe000d;
     font-size: 40px;
     margin-bottom: 10px;

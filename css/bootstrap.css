@@ -116,6 +116,8 @@ textarea {
   margin: 0;
   font: inherit;
   color: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 button {
   overflow: visible;
@@ -6772,26 +6774,3 @@ button.close {
     display: none !important;
   }
 }
-
-#jumbotronImg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto 
-}
-
-.navbarArrow{
-	color: #fe000d;
-}
-
-.down{
-    color: white;
-    transform: rotate(90deg); 
-}
-
-#footerEl{
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-}
-
-/*# sourceMappingURL=bootstrap.css.map */
