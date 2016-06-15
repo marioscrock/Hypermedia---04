@@ -11,8 +11,7 @@ function ready(){
         data: {id:id},
         success: function(response) {
 						console.log(response);
-            //var courses=JSON.parse(response);
-						//console.log(courses);
+            
             /*var el="";
             for(var i=0;i<courses.length;i++){
                 console.log(courses[i].title);      
