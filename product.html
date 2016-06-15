@@ -23,7 +23,6 @@
   </head>
 
   <body>
-      	
     <div class="container-fluid">
       <div class="row">
    
@@ -31,25 +30,18 @@
         <!-- ACTUAL PAGE -->
           
         <div class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="productTitle">LG G5</h1>
+          <h1 class="productTitle"></h1>
           <div class="redDivider"></div>
           <div class="row placeholders">  
             <div class="col-md-6  placeholder">
               <img src="img/LG_G5_titan.jpg" class="img-responsive" alt="Generic placeholder thumbnail ">
-                <div class="col-md-6  placeholder"><p class = "productTitle">699,90€</p></div>
+                <div class="col-md-6  placeholder"><p class = "productPrice"></p></div>
                 <div class="col-md-6  placeholder"><button type ="button" id="btn-buy" class="btn btn-primary">Acquista ora</button></div>        
             </div>
             <div class="col-md-6  placeholder">
 							<p class="productSectionTitle" align ="left"><b>Presentazione</b></p>
-                <p  align ="left">
-                  Il nuovo LG G5 è uno nuovo tipo di smartphone che supera tutti i limiti, con un design modulare completamete in metallo che rivoluziona i canoni di design. Espandi le funzioni, interagisci con gli innovativi LG Friends e prova un'esperienza smartphone realmente innovativa. La rivoluzione di G5 continua con la doppia fotocamera grandangolare, che cattura più di quanto i tuoi occhi riescano a vedere. Anche sotto il sole, perché il nuovo display IPS Quantum è più ricco, luminoso e colorato anche sotto la luce diretta del sole. E ti mostra sempre le notifiche principali anche quando non è attivo. Nuovo LG G5: quello che non ti aspetti, nel palmo della tua mano.<br><br>
-                  COMPLETAMENTE IN METALLO<br><br>Bellezza e raffinatezza nel palmo della tua mano. Cerchi da sempre la cura nei dettagli e l'eleganza dei materiali, ed eccoli qui. Il metallo e il vetro si uniscono morbidamente in una forma semplicemente iconica. Che ti dà sensazioni tutte da provare.<br><br>
-                  DESIGN MODULARE</br></br>
-                  Liberati dalle convenzioni. Il nuovo design modulare con batteria a slitta ti permettere di avere tutto quello che gli altri non hanno mai saputo darti. La libertà di avere uno smartphone in metallo e di poter cambiare la batteria quando desideri. E di espandere le funzioni con nuovi moduli.<br><br>
-                  DOPPIA FOTOCAMERA CON LENTI GRANDANGOLARI<br><br>
-                  Cattura tutto ciò che vedi! I nostri occhi vedono più di quanto una fotocamera convenzionale riesca a catturare. Ma con LG G5 puoi fare anche di più, perché ha due fotocamere. Con la prima cogli tutti i dettagli. Con la lente grandangolare a 135° della seconda, invece, catturi perfino più di quanto vedono i tuoi occhi. Grattacieli, un concerto o l'intera spiaggia dove ti trovi vivranno nitidi sul tuo nuovo G5<br><br>
-                  LUMINOSITÀ ESTREMA<br><br>
-                  Ecco uno schermo davvero intelligente. Che riconosce quando sei sotto la luce diretta del sole per offrirti una leggibilità sempre ottimale. Il nuovo display IPS Quantum è più luminoso, più colorato e più chiaro anche in pieno sole.
+                <p id="presentation" align ="left">
+                  
                 </p>
             </div>
           </div>
@@ -58,58 +50,8 @@
           <div class="redDivider"></div>
           <div class="col-md-12  placeholder">
               <p class="productSectionTitle"><b>Specifiche Tecniche</b></p>
-              <p align ="left">
-                Sistema Operativo Android 6.0<br><br>
-                Display 5.3”<br>
-                Processore Snapdragon™ 820 QuadCore 2.1 GHz - 4G LTE<br>
-                Tecnologia<br>
-                4G cat.6/HSDPA42/UMTS/EDGE/GPRS Frequenze 850/900/1800/1900/2100<br><br>
-                Connettivita<br>
-                Wi-Fi - Bluetooth - Micro USB - NFC<br><br>
-
-                GPS<br>
-                Integrato<br><br>
-
-                Display<br>
-                5.3” 16 Milioni colori Touch<br><br>
-
-                Fotocamera<br>
-                16 Mpixel/Flash<br><br>
-
-                Memoria Interna<br>
-                16GB<br>
-                Slot Memory Card Micro SD fino a 2TB<br><br>
-
-                Processore<br>
-                Processore Snapdragon™ 820 QuadCore 2.1 GHz - 4G LTE<br><br>
-
-                Formato SIM<br>
-                Nano<br><br>   
-
-                Video<br>
-                Video Recorder e Playback<br><br>
-
-                Musica<br>
-                MP3 Player<br><br>
-
-                In dotazione<br>
-                Caricabatteria<br>
-                Cavo dati USB tipo C<br>
-                Auricolare stereo<br>
-                Manuale d’uso rapido<br><br>
-
-                Dimensioni<br>
-                149,4x73,9x7,3 mm<br><br>
-
-                Peso<br>
-                159 gr.<br><br>
-
-                Autonomia(*)<br>
-                Stand-by fino a 100 ore - Conversazione fino a 240 min.<br><br>
-
-                Note<br>
-                * Le prestazioni delle batterie dipendono da vari fattori tra cui la vicinanza delle antenne, lo stato delle batterie, la posizione geografica e il tipo di rete utilizzata.<br><br>
-
+              <p id="specifications"align ="left">
+                
                 </p>
           </div>
       </div>
@@ -131,6 +73,15 @@
 						<li><a class="sidebarEntry" href="">Verifica credito residuo</a></li>
 					</ul>
 				</div>
+				<ul class="nav nav-sidebar">
+					<a id="back"><li class="sidebarBack">Indietro</li></a>
+						<script type="text/javascript">
+							$("#back").click(function() {
+								console.log("back");
+								window.history.back();
+							});
+						</script>
+				</ul>
 			</div>
 	</div>
 </div>

@@ -1,4 +1,9 @@
 <?php
+
+
+header('Content-type: text/plain; charset=utf-8');
+
+
 //get all the course from db and reply using json structure
 
 //echo "I'm the php";
@@ -16,6 +21,16 @@ else {
     $query = " SELECT * FROM products WHERE id_prod = 1  ";
     //query execution
     $result = $mysqli->query($query);
+		if($result==FALSE) {
+			echo "la query va ammmerda";
+		} else {
+			echo $result->num_rows;
+			$array = array();
+			$array = $result->fetch_array(MYSQL_ASSOC);
+			
+			echo $array["specifications"];
+			echo json_encode($array);
+		}
     //if there are data available
 		if($result!=FALSE){
 			if($result->num_rows >0)
