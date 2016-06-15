@@ -6769,11 +6769,13 @@ button.close {
     display: inline-block !important;
   }
 }
+
 @media print {
   .hidden-print {
     display: none !important;
   }
-  
+}
+
 @media(max-width: 767px){
   .text-Footer{
     font-size: 12px;
@@ -6790,8 +6792,6 @@ button.close {
 .down {
   color: white;
   transform: rotate(90deg);
-}
-
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
