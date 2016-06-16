@@ -10,12 +10,10 @@ function ready(){
         url: "productData.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
-					console.log(response);
-					console.log(response[0].name);
-					$(".productTitle").html(response[0].name);
-					$(".productPrice").html(response[0].price+"€");
-					/*$("#presentation").html(response[0].description);
-					$("#specifications").html(response[0].specifications);*/
+					$(".productTitle").html(response.name);
+					$(".productPrice").html(response.price+"€");
+					$("#presentation").html(response.description);
+					$("#specifications").html(response.specifications);
             /*var el="";
             for(var i=0;i<courses.length;i++){
                 console.log(courses[i].title);      
