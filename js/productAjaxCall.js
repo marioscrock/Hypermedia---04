@@ -7,7 +7,7 @@ function ready(){
         method: "POST",
         dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "productData.php", //Relative or absolute path to file.php file
+        url: "/php/productData.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
 					$(".productTitle").html(response.name);
