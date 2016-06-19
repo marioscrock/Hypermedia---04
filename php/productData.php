@@ -20,8 +20,9 @@ else {
 		$mysqli->set_charset("utf8");
     
 		# extract results mysqli_result::fetch_array
-    $query = " SELECT * FROM products WHERE id_prod = 1  ";
-    
+    $query = " SELECT products.id_prod, products.name, products.price, products.description, products.specifications, images.img
+							 FROM product_images JOIN products JOIN images
+				 			 WHERE (images.id_img = product_images.id_img)&&(products.id_prod=product_images.id_prod)&&(products.id_prod=".$_POST["id"].")";
 		//query execution
     $result = $mysqli->query($query);
 		if($result==FALSE) {

@@ -30,6 +30,8 @@
 
 .item{
 		font-size: 18px;
+		white-space: nowrap;
+  	overflow: hidden;
 }
 
 .itemPrice{
@@ -47,19 +49,21 @@
 
 #btn-detail {
     background-color: #0b3d86;
-    font-size: 24px;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
 @media (max-width: 767px) {
-    
+
 }
 
 @media (min-width: 768px) {
-    
+
 }
 
+@media (min-width: 1000px) {
+
+}
 @media (min-width: 1200px) {
-    
+
 }
