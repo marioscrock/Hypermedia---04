@@ -6,10 +6,6 @@ $(document).ready(function () {
     , "min-height": "100%"
   });
 
-  $("body").css({
-    "margin-bottom": "80px"
-  });
-
   $(".footer").css({
     "position": "absolute"
     , "bottom": "0"
