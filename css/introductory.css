@@ -58,12 +58,14 @@
 }
 
 @media (min-width: 768px) {
-
+		
 }
 
 @media (min-width: 1000px) {
-
+		
 }
-@media (min-width: 1200px) {
-
+@media (min-width: 1400px) {
+	#btn-detail {
+			font-size: 22px;
+	}
 }
