@@ -31,7 +31,9 @@ else {
 			if($result->num_rows >0)
 			{
 				$array = array();
-				$array = $result->fetch_array(MYSQL_ASSOC);
+				while($row = $result->fetch_assoc()) {
+					array_push($array, $row);
+				}
 				echo json_encode($array);
 			}
 		}
