@@ -36,7 +36,7 @@ else {
 			}
 		}
 	
-    //free result
+    //free result 
     $result->close();
 
     //close connection
