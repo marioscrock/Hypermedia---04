@@ -39,7 +39,9 @@ function ready() {
 		, success: function (response) {
 			var tiles = "";
 			if (GET["item"] === "assistance_categories") {
-				tiles += "<div id = 'category' class='row col-md-12' style='padding:1px; margin:5px;'><div class='col-md-2'>  <img class='img-responsive' style='margin:0 auto'src=" + response[i].img + "> </div> <div class='col-md-9'> <a href= assistanceIntroductory.html?category=" + response[i].id_cat + "> <h2> <strong>" + response[i].name + "</strong> </h2 > </a> </div> </div> </div>";
+				for (var i = 0; i < response.length; i++) {
+					tiles += "<div id = 'category' class='row col-md-12' style='padding:1px; margin:5px;'><div class='col-md-2'>  <img class='img-responsive' style='margin:0 auto'src=" + response[i].img + "> </div> <div class='col-md-9'> <a href= assistanceIntroductory.html?category=" + response[i].id_cat + "> <h2> <strong>" + response[i].name + "</strong> </h2 > </a> </div> </div> </div>";
+				}
 			} else {
 				for (var i = 0; i < response.length; i++) {
 					tiles += "<div id = 'category' class='row col-md-12' style='padding:1px; margin:5px;'><div class='col-md-2'>  <img class='img-responsive' style='margin:0 auto'src=" + response[i].img + "> </div> <div class='col-md-9'> <a href= introductory.html?category=" + response[i].id_cat + "&item=" + GET["item"] + "> <h2> <strong>" + response[i].name + "</strong> </h2 > </a> </div> </div> </div>";
