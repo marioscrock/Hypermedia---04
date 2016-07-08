@@ -10,6 +10,7 @@ function ready() {
 		var param = query[i].split("=");
 		GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
 	}
+
 	$.ajax({
 		method: "POST"
 		, dataType: "json", //type of data
