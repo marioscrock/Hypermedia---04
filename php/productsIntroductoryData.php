@@ -19,7 +19,7 @@ else {
 		/* change character set to utf8 */
 		$mysqli->set_charset("utf8");
     
-		# extract results mysqli_result::fetch_array
+		
     $query = "  SELECT products.id_prod, products.name, products.price, images.img
 FROM product_images JOIN products JOIN images
 WHERE(images.id_img = product_images.id_img)&&(products.id_prod=product_images.id_prod)&&(products.id_prod_cat=1) 
