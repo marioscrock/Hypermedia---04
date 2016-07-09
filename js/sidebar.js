@@ -90,11 +90,13 @@ function buildSidebar(tablename, id) {
 				}
 			}
 		})).then(function () {
+		var sidebar = "";
 		if (section1content != "") {
-			$("#sidebarContainer").append(section1content);
+			sidebar += section1content;
 		}
 		if (section2content != "") {
-			$("#sidebarContainer").append(section2content);
+			sidebar += section2content;
 		}
+		$("#sidebarContainer").append(sidebar);
 	})
 }
