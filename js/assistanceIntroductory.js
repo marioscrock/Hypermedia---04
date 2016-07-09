@@ -45,7 +45,7 @@ function ready() {
       id: GET["category"]
     }
     , success: function (response) {
-      console.log("OK!");
+
       var subcategories = [];
       var subcategory = "";
 
@@ -54,8 +54,6 @@ function ready() {
           subcategories.push(response[i].name);
         }
       }
-
-      console.log(subcategories);
 
       for (var i = 0; i < subcategories.length; i++) {
 

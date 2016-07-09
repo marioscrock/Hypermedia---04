@@ -4,6 +4,7 @@ function ready() {
 
   var title = "";
   var sidebarCategories = "";
+  var orientation = "";
   var GET = {};
   var query = window.location.search.substring(1).split("&");
   for (var i = 0, max = query.length; i < max; i++) {
@@ -26,6 +27,7 @@ function ready() {
       }
       , success: function (response) {
         title += "<li class='sidebarTitle'>" + response[0].value + "</li>";
+        orientation += "<li><a href='categorie-item.html?item=" + GET["item"] + "'>" + response[0].value + "</a></li>";
       }
       , error: function (request, error) {
         console.log("Error");
@@ -46,6 +48,7 @@ function ready() {
 
           if (response[i].id_cat === GET["category"]) {
             sidebarCategories += "<li><a class='sidebarEntry' style='color: #fe000d'>" + response[i].name + "</a></li>";
+            orientation += "<li class='active'>" + response[i].name + "</li>";
           } else {
 
             if (GET["item"] === "assistance_categories") {
@@ -67,5 +70,6 @@ function ready() {
     toAdd += title;
     toAdd += sidebarCategories;
     $("#sidebarCategories").html(toAdd);
+    $("#orientation").html(orientation);
   })
 }
