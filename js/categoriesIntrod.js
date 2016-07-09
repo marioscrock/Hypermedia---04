@@ -26,6 +26,9 @@ function ready() {
       $("#itemName").html("<strong>" + response[0].value.toUpperCase() + "</strong>");
       console.log(response[0].value);
     }
+    , error: function (request, error) {
+      console.log("Error");
+    }
   });
 
   $.ajax({
@@ -40,11 +43,11 @@ function ready() {
       var tiles = "";
       if (GET["item"] === "assistance_categories") {
         for (var i = 0; i < response.length; i++) {
-          tiles += "<div id = 'category' class='row col-md-12' style='padding:1px; margin:5px;'><div class='col-md-2'>  <img class='img-responsive' style='margin:0 auto'src=" + response[i].img + "> </div> <div class='col-md-9'> <a href= assistanceIntroductory.html?category=" + response[i].id_cat + "> <h2 class='text-Categories'> <strong>" + response[i].name + "</strong> </h2 > </a> </div> </div> </div>";
+          tiles += "<div id = 'category' class='row col-md-12' style='padding:1px; margin:5px;'><div class='col-md-2'>  <img class='img-responsive' style='margin:0 auto'src=" + response[i].img + "> </div> <div class='col-md-9'> <a href='assistanceIntroductory.html?category=" + response[i].id_cat + "&item=" + GET["item"] + "'> <h2 class='text-Categories'> <strong>" + response[i].name + "</strong> </h2 > </a> </div> </div> </div>";
         }
       } else {
         for (var i = 0; i < response.length; i++) {
-          tiles += "<div id = 'category' class='row col-md-12' style='padding:1px; margin:5px;'><div class='col-md-2'>  <img class='img-responsive' style='margin:0 auto'src=" + response[i].img + "> </div> <div class='col-md-9'> <a href= introductory.html?category=" + response[i].id_cat + "&item=" + GET["item"] + "> <h2 class='text-Categories'> <strong>" + response[i].name + "</strong> </h2 > </a> </div> </div> </div>";
+          tiles += "<div id = 'category' class='row col-md-12' style='padding:1px; margin:5px;'><div class='col-md-2'>  <img class='img-responsive' style='margin:0 auto'src=" + response[i].img + "> </div> <div class='col-md-9'> <a href='introductory.html?category=" + response[i].id_cat + "&item=" + GET["item"] + "' > <h2 class='text-Categories'> <strong>" + response[i].name + "</strong> </h2 > </a> </div> </div> </div>";
         }
       }
       $("#categories").html(tiles);
