@@ -62,7 +62,7 @@ function ready() {
 
         for (var j = 0; j < response.length; j++) {
           if (response[j].name === subcategories[i]) {
-            subcategory += "<li><a href='assistenza.html?category=" + GET["category"] + "&assistance=" + response[j].id_ass + "'>" + response[j].title + "</a></li>";
+            subcategory += "<li><a href='assistenza.html?assistance=" + response[j].id_ass + "'>" + response[j].title + "</a></li>";
           }
         }
         subcategory += "</ul></div>";
