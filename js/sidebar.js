@@ -91,7 +91,7 @@ function buildSidebar(tablename, id) {
 				var parameters = "";
 				for (var i = 0; i < response.length; i++) {
 					if (section2table === "assistances") {
-						parameters = response[i].category + "&id_ass=" + response[i].id
+						parameters = response[i].category + "&assistance=" + response[i].id
 					}
 					else {
 						parameters = response[i].id;
