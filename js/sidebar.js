@@ -15,14 +15,14 @@ function buildSidebar(tablename, id) {
     section1table = "services";
     section2table = "assistances";
     section1pageurl = "servizio.html?id_serv=";
-    section2pageurl = "assistenza.html?category=";
+    section2pageurl = "assistenza.html?assistance=";
     break;
   case "services":
     phpFileName = "servicesSidebar.php";
     section1table = "products";
     section2table = "assistances";
     section1pageurl = "product.html?id_prod=";
-    section2pageurl = "assistenza.html?category=";
+    section2pageurl = "assistenza.html?assistance=";
     break;
   case "assistances":
     phpFileName = "assistancesSidebar.php";
@@ -90,11 +90,7 @@ function buildSidebar(tablename, id) {
       if (response.length > 0) {
         var parameters = "";
         for (var i = 0; i < response.length; i++) {
-          if (section2table === "assistances") {
-            parameters = response[i].category + "&assistance=" + response[i].id
-          } else {
-            parameters = response[i].id;
-          }
+          parameters = response[i].id;
           section2content += "<li><a class='sidebarEntry' href='" + section2pageurl + parameters + "'>" + response[i].name + "</a></li>";
         }
         section2content += "</ul>	</div>";

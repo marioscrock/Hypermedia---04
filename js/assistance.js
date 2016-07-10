@@ -49,7 +49,7 @@ function ready() {
         document.title = response[0].title;
         $("#titleAssistance").html("<h1 class='sectionTitle'>" + response[0].title + "</h1>");
 
-        orientationSecond += "<li><a href='assistanceIntroductory.html?category=" + GET["category"] + "&item=assistance_categories'>" + response[0].name + "</a></li><li class='active'>" + response[0].title + "</li>";
+        orientationSecond += "<li><a href='assistanceIntroductory.html?category=" + response[0].category + "&item=assistance_categories'>" + response[0].name + "</a></li><li class='active'>" + response[0].title + "</li>";
 
         if (!(response[0].img === "")) {
           mainContainer += "<div class='col-md-6'><p id='presentation' align='left'>" + response[0].description + "</p></div><div class='col-md-6'><img style='display: block; margin: 0 auto;' class='img-responsive' src='" + response[0].img + "'></div>";
