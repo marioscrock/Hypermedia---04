@@ -10,6 +10,23 @@ function ready() {
 		GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
 	}
 	buildSidebar("products", GET["id_prod"]);
+	var orientationFirst = "";
+	var orientationSecond = "";
+	$.ajax({
+		method: "POST"
+		, dataType: "json", //type of data
+		crossDomain: true, //localhost purposes
+		url: "/php/stringData.php", //Relative or absolute path to file.php file
+		data: {
+			id: "product_categories"
+		}
+		, success: function (response) {
+			orientationFirst += "<li><a href='categorie-item.html?item=product_categories'>" + response[0].value + "</a></li>";
+		}
+		, error: function (request, error) {
+			console.log("Error");
+		}
+	});
 	$.ajax({
 		method: "POST"
 		, dataType: "json", //type of data
@@ -19,6 +36,7 @@ function ready() {
 			id: GET["id_prod"]
 		}
 		, success: function (response) {
+			orientationSecond = "<li><a href='introductory.html?category=" + response[0].category + "&item=product_categories'>" + response[0].category_name + "</a></li><li class='active'>" + response[0].name + "</li>";
 			$(".productTitle").html(response[0].name);
 			var carousel = "<div id='myCarousel' class='carousel slide' data-ride='carousel'>	<!-- Indicators -->	<ol class='carousel-indicators'>	<li data-target='#myCarousel' data-slide-to='0' class='active'></li>";
 			for (var i = 1; i < response.length; i++) {
@@ -37,5 +55,8 @@ function ready() {
 		, error: function (request, error) {
 			console.log("Error");
 		}
+	});
+	$(document).ajaxStop(function () {
+		$("#orientation").html(orientationFirst + orientationSecond);
 	});
 }
