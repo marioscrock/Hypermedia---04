@@ -21,8 +21,7 @@ else {
 				$query = "SELECT services.name, services.id_serv as id FROM assistances JOIN ass_serv JOIN services WHERE assistances.id_ass = ass_serv.id_ass && services.id_serv = ass_serv.id_serv && assistances.id_ass =".$_POST["id"];
 				break;
 		}
-	
-		//query execution
+
     $result = $mysqli->query($query);
 		if($result==FALSE) {
 			echo "no result";
