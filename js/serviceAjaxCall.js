@@ -19,9 +19,9 @@ function ready() {
             id: GET["id_serv"]
         }
         , success: function (response) {
-            $(".serviceTitle").html(response[0].name);
-            $("#imgContainerTop").append(" <img  class='img-responsive' src=" + response[0].img_top + " > ");
-            $("#imgContainerBot").prepend(" <img  class='img-responsive' src=" + response[0].img_bot + " > ");
+            $(".sectionTitle").html(response[0].name);
+            $("#imgContainerTop").prepend("<img class='img-responsive' src=" + response[0].img_top + ">response[0].img_top");
+            $("#imgContainerBot").prepend("<img class='img-responsive' src=" + response[0].img_bot + ">response[0].img_top");
             $("#presentation").html(response[0].par_top);
             $("#specifications").html(response[0].par_bot);
         }
