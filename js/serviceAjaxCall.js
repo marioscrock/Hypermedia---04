@@ -20,8 +20,8 @@ function ready() {
         }
         , success: function (response) {
             $(".serviceTitle").html(response[0].name);
-            $("#imgContainerTop").prepend(response[0].img_top);
-            $("#imgContainerBot").prepend(response[0].img_bot);
+            $("#imgContainerTop").append(" <img  class='img-responsive' src=" + response[0].img_top + " > ");
+            $("#imgContainerBot").prepend(" <img  class='img-responsive' src=" + response[0].img_bot + " > ");
             $("#presentation").html(response[0].par_top);
             $("#specifications").html(response[0].par_bot);
         }

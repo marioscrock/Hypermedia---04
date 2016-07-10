@@ -22,7 +22,6 @@ function buildSidebar(tablename, id) {
 		section2table = "services";
 		break;
 	}
-			}
 	//Gets the name of the section from db
 	$.ajax({
 		method: "POST"
