@@ -20,8 +20,8 @@ function ready() {
         }
         , success: function (response) {
             $(".sectionTitle").html(response[0].name);
-            $("#imgContainerTop").prepend("<img class='img-responsive' src=" + response[0].img_top + ">response[0].img_top");
-            $("#imgContainerBot").prepend("<img class='img-responsive' src=" + response[0].img_bot + ">response[0].img_top");
+            $("#imgContainerTop").prepend("<img class='img-responsive' src=" + response[0].img_top + ">");
+            $("#imgContainerBot").prepend("<img class='img-responsive' src=" + response[0].img_bot + ">");
             $("#presentation").html(response[0].par_top);
             $("#specifications").html(response[0].par_bot);
         }
