@@ -9,7 +9,7 @@ function ready() {
 		var param = query[i].split("=");
 		GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
 	}
-	buildSidebar("products", GET["id_prod"]);
+	buildSidebar("products", GET["id"]);
 	var orientationFirst = "";
 	var orientationSecond = "";
 	$.ajax({
@@ -33,7 +33,7 @@ function ready() {
 		crossDomain: true, //localhost purposes
 		url: "/php/productData.php", //Relative or absolute path to file.php file
 		data: {
-			id: GET["id_prod"]
+			id: GET["id"]
 		}
 		, success: function (response) {
 			orientationSecond = "<li><a href='introductory.html?category=" + response[0].category + "&item=product_categories'>" + response[0].category_name + "</a></li><li class='active'>" + response[0].name + "</li>";

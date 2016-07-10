@@ -1,4 +1,15 @@
+var globalId;
+
 function buildSidebar(tablename, id) {
+	var GET = {};
+	var query = window.location.search.substring(1).split("&");
+	for (var i = 0, max = query.length; i < max; i++) {
+		if (query[i] === "") // check for trailing & with no param
+			continue;
+		var param = query[i].split("=");
+		GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
+	}
+	globalId = id;
 	var elements;
 	var phpFileName;
 	var section1table = "";
@@ -14,22 +25,22 @@ function buildSidebar(tablename, id) {
 		phpFileName = "productsSidebar.php";
 		section1table = "services";
 		section2table = "assistances";
-		section1pageurl = "servizio.html?id_serv=";
-		section2pageurl = "assistenza.html?assistance=";
+		section1pageurl = "servizio.html?id=";
+		section2pageurl = "assistenza.html?id=";
 		break;
 	case "services":
 		phpFileName = "servicesSidebar.php";
 		section1table = "products";
 		section2table = "assistances";
-		section1pageurl = "product.html?id_prod=";
-		section2pageurl = "assistenza.html?assistance=";
+		section1pageurl = "product.html?id=";
+		section2pageurl = "assistenza.html?id=";
 		break;
 	case "assistances":
 		phpFileName = "assistancesSidebar.php";
 		section1table = "products";
 		section2table = "services";
-		section1pageurl = "product.html?id_prod=";
-		section2pageurl = "servizio.html?id_serv=";
+		section1pageurl = "product.html?id=";
+		section2pageurl = "servizio.html?id=";
 		break;
 	}
 	//Gets the name of the section from db
@@ -57,7 +68,7 @@ function buildSidebar(tablename, id) {
 		, success: function (response) {
 			if (response.length > 0) {
 				for (var i = 0; i < response.length; i++) {
-					section1content += "<li><a class='sidebarEntry' href='" + section1pageurl + response[i].id + "''>" + response[i].name + "</a></li>";
+					section1content += "<li><a class='sidebarEntry' href='" + section1pageurl + response[i].id + "&backpage=" + location.pathname.substring(1) + "&backid=" + id + "''>" + response[i].name + "</a></li>";
 				}
 				section1content += "</ul>	</div>";
 			}
@@ -89,10 +100,8 @@ function buildSidebar(tablename, id) {
 		}
 		, success: function (response) {
 			if (response.length > 0) {
-				var parameters = "";
 				for (var i = 0; i < response.length; i++) {
-					parameters = response[i].id;
-					section2content += "<li><a class='sidebarEntry' href='" + section2pageurl + parameters + "'>" + response[i].name + "</a></li>";
+					section2content += "<li><a class='sidebarEntry' href='" + section2pageurl + response[i].id + "&backpage=" + location.pathname.substring(1) + "&backid=" + id + "'>" + response[i].name + "</a></li>";
 				}
 				section2content += "</ul>	</div>";
 			}
@@ -111,7 +120,25 @@ function buildSidebar(tablename, id) {
 			sidebar += section2title;
 			sidebar += section2content;
 		}
-		sidebar += "<ul class='nav nav-sidebar'> <a id='back'> <li class='sidebarBack'>Indietro</li> </a> <script type='text/javascript'> $('#back').click(function () { window.history.back(); }); </script> </ul>";
+		if (!(GET["backpage"] === undefined)) {
+			sidebar += "<ul class='nav nav-sidebar'> <a id='back' onclick='back()'> <li class='sidebarBack'>Indietro</li> </a></ul>";
+		}
 		$("#sidebarContainer").append(sidebar);
 	});
+}
+
+function back() {
+	var GET = {};
+	var query = window.location.search.substring(1).split("&");
+	for (var i = 0, max = query.length; i < max; i++) {
+		if (query[i] === "") // check for trailing & with no param
+			continue;
+		var param = query[i].split("=");
+		GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
+	}
+	if (!(GET["backpage"] === "")) {
+		var href = GET["backpage"] + "?id=" + GET["backid"];
+		href += "&backpage=" + location.pathname.substring(1) + "&backid=" + globalId;
+		location.href = href;
+	}
 }
