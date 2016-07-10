@@ -42,6 +42,7 @@ function ready() {
             $("#imgContainerBot").prepend("<img class='img-responsive' src=" + response[0].img_bot + ">");
             $("#presentation").html(response[0].par_top);
             $("#specifications").html(response[0].par_bot);
+
         }
         , error: function (request, error) {
             console.log("Error");
