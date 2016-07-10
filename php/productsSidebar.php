@@ -16,7 +16,7 @@ else {
 		# extract results mysqli_result::fetch_array
 		switch($_POST["table"]){
 			case "assistances" : 
-    		$query = "SELECT assistances.title as name, assistances.id_ass as id FROM products JOIN ass_prod JOIN assistances WHERE products.id_prod = ass_prod.id_prod && assistances.id_ass = ass_prod.id_ass && products.id_prod = ".$_POST["id"];
+    		$query = "SELECT assistances.title as name, assistances.id_ass as id, assistance_subcategories.category FROM products JOIN ass_prod JOIN assistances JOIN assistance_subcategories WHERE products.id_prod = ass_prod.id_prod && assistances.id_ass = ass_prod.id_ass && products.id_prod =" .$_POST["id"]." &&assistances.subcategory=assistance_subcategories.id_ass_subcat";
 				break;
 			case "services" :
 				$query = "SELECT services.name, services.id_serv as id FROM products JOIN prod_serv JOIN services WHERE products.id_prod = prod_serv.id_prod && services.id_serv = prod_serv.id_serv && products.id_prod =".$_POST["id"];

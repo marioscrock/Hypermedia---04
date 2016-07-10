@@ -19,7 +19,7 @@ else {
     		$query = "SELECT products.name, products.id_prod as id FROM products JOIN prod_serv JOIN services WHERE services.id_serv = prod_serv.id_serv && products.id_prod = prod_serv.id_prod && services.id_serv = ".$_POST["id"];
 				break;
 			case "assistances" :
-				$query = "SELECT assistances.title as name, assistances.id_ass as id FROM services JOIN ass_serv JOIN assistances WHERE services.id_serv = ass_serv.id_serv && assistances.id_ass = ass_serv.id_ass && services.id_serv = ".$_POST["id"];
+				$query = "SELECT assistances.title as name, assistances.id_ass as id, assistance_subcategories.category FROM services JOIN ass_serv JOIN assistances WHERE services.id_serv = ass_serv.id_serv && assistances.id_ass = ass_serv.id_ass && assistances.subcategory=assistance_subcategories.id_ass_subcat && services.id_serv = ".$_POST["id"];
 				break;
 		}
 	

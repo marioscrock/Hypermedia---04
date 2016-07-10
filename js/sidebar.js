@@ -7,21 +7,29 @@ function buildSidebar(tablename, id) {
 	var section2title = "";
 	var section1content = "";
 	var section2content = "";
+	var section1pageurl = "";
+	var section2pageurl = "";
 	switch (tablename) {
 	case "products":
 		phpFileName = "productsSidebar.php";
 		section1table = "services";
 		section2table = "assistances";
+		section1pageurl = "servizio.html?id_serv=";
+		section2pageurl = "assistenza.html?category=";
 		break;
 	case "services":
 		phpFileName = "servicesSidebar.php";
 		section1table = "products";
 		section2table = "assistances";
+		section1pageurl = "product.html?id_prod=";
+		section2pageurl = "assistenza.html?category=";
 		break;
 	case "assistances":
 		phpFileName = "assistancesSidebar.php";
 		section1table = "products";
 		section2table = "services";
+		section1pageurl = "product.html?id_prod=";
+		section2pageurl = "servizio.html?id_serv=";
 		break;
 	}
 	$.ajax({
@@ -48,7 +56,7 @@ function buildSidebar(tablename, id) {
 		, success: function (response) {
 			if (response.length > 0) {
 				for (var i = 0; i < response.length; i++) {
-					section1content = "<li><a class='sidebarEntry' href='#'>" + response[i].name + "</a></li>";
+					section1content = "<li><a class='sidebarEntry' href='" + section1pageurl + response[i].id + "''>" + response[i].name + "</a></li>";
 				}
 				section1content += "</ul>	</div>";
 			}
@@ -80,8 +88,15 @@ function buildSidebar(tablename, id) {
 		}
 		, success: function (response) {
 			if (response.length > 0) {
+				var parameters = "";
 				for (var i = 0; i < response.length; i++) {
-					section2content = "<li><a class='sidebarEntry' href='#'>" + response[i].name + "</a></li>";
+					if (section2table === "assistances") {
+						parameters = response[i].category + "&id_ass=" + response[i].id
+					}
+					else {
+						parameters = response[i].id;
+					}
+					section2content = "<li><a class='sidebarEntry' href='" + section2pageurl + parameters + "'>" + response[i].name + "</a></li>";
 				}
 				section2content += "</ul>	</div>";
 			}
