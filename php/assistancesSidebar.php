@@ -13,13 +13,12 @@ else {
 		/* change character set to utf8 */
 		$mysqli->set_charset("utf8");
     
-		# extract results mysqli_result::fetch_array
 		switch($_POST["table"]){
 			case "products" : 
-    		$query = "SELECT products.name, products.id_prod as id FROM asssitances JOIN ass_prod JOIN products WHERE assistances.id_ass = ass_prod.id_ass && products.id_prod = ass_prod.id_prod && assistances.id_ass =".$_POST["id"];
+    		$query = "SELECT products.name, products.id_prod as id FROM assistances JOIN ass_prod JOIN products WHERE assistances.id_ass = ass_prod.id_ass && products.id_prod = ass_prod.id_prod && assistances.id_ass =".$_POST["id"];
 				break;
 			case "services" :
-				$query = "SELECT services.name, services.id_serv as id FROM asssitances JOIN ass_serv JOIN services WHERE assistances.id_ass = ass_serv.id_ass && services.id_serv = ass_serv.id_serv && assistances.id_ass =".$_POST["id"];
+				$query = "SELECT services.name, services.id_serv as id FROM assistances JOIN ass_serv JOIN services WHERE assistances.id_ass = ass_serv.id_ass && services.id_serv = ass_serv.id_serv && assistances.id_ass =".$_POST["id"];
 				break;
 		}
 	
