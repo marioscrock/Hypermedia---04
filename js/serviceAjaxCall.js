@@ -10,6 +10,23 @@ function ready() {
         GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
     }
     buildSidebar("services", GET["id_serv"]);
+    var orientationFirst = "";
+    var orientationSecond = "";
+    $.ajax({
+        method: "POST"
+        , dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "/php/stringData.php", //Relative or absolute path to file.php file
+        data: {
+            id: "service_categories"
+        }
+        , success: function (response) {
+            orientationFirst += "<li><a href='categorie-item.html?item=service_categories'>" + response[0].value + "</a></li>";
+        }
+        , error: function (request, error) {
+            console.log("Error");
+        }
+    });
     $.ajax({
         method: "POST"
         , dataType: "json", //type of data
@@ -19,6 +36,7 @@ function ready() {
             id: GET["id_serv"]
         }
         , success: function (response) {
+            orientationSecond = "<li><a href='introductory.html?category=" + response[0].category + "&item=service_categories'>" + response[0].category_name + "</a></li><li class='active'>" + response[0].name + "</li>";
             $(".sectionTitle").html(response[0].name);
             $("#imgContainerTop").prepend("<img class='img-responsive' src=" + response[0].img_top + ">");
             $("#imgContainerBot").prepend("<img class='img-responsive' src=" + response[0].img_bot + ">");
@@ -28,5 +46,8 @@ function ready() {
         , error: function (request, error) {
             console.log("Error");
         }
+    });
+    $(document).ajaxStop(function () {
+        $("#orientation").html(orientationFirst + orientationSecond);
     });
 }

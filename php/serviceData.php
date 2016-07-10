@@ -20,9 +20,9 @@ else {
 		$mysqli->set_charset("utf8");
     
 		# extract results mysqli_result::fetch_array
-    $query = " SELECT services.id_serv, services.name , services.img_bot , services.img_top , services.par_top , services.par_bot
-							 FROM services 
-				 			 WHERE (services.id_serv=".$_POST["id"].")";
+    $query = " SELECT services.id_serv, services.name , services.img_bot , services.img_top , services.par_top , services.par_bot, service_categories.id_cat as category, service_categories.name as category_name
+							 FROM services JOIN service_categories
+				 			 WHERE (service_categories.id_cat=services.id_cat_serv)&&(services.id_serv=".$_POST["id"].")";
 		//query execution
     $result = $mysqli->query($query);
 		if($result==FALSE) {
