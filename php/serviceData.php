@@ -21,8 +21,8 @@ else {
     
 		# extract results mysqli_result::fetch_array
     $query = " SELECT services.id_serv, services.name , services.img_bot , services.img_top , services.par_top , services.par_bot
-							 FROM services JOIN service_categories
-				 			 WHERE (services.id_cat_serv = service_categories.id_cat)&&(services.id_serv=".$_POST["id"].")";
+							 FROM services 
+				 			 WHERE (services.id_serv=".$_POST["id"].")";
 		//query execution
     $result = $mysqli->query($query);
 		if($result==FALSE) {
