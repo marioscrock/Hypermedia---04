@@ -1,10 +1,12 @@
 function buildSidebar(tablename, id) {
 	var elements;
 	var phpFileName;
-	var section1table;
-	var section2table;
-	var section1content;
-	var section2content;
+	var section1table = "";
+	var section2table = "";
+	var section1title = "";
+	var section2title = "";
+	var section1content = "";
+	var section2content = "";
 	switch (tablename) {
 	case "products":
 		phpFileName = "productsSidebar.php";
@@ -22,7 +24,6 @@ function buildSidebar(tablename, id) {
 		section2table = "services";
 		break;
 	}
-	//Gets the name of the section from db
 	$.ajax({
 		method: "POST"
 		, dataType: "json", //type of data
@@ -32,9 +33,9 @@ function buildSidebar(tablename, id) {
 			id: section1table
 		}
 		, success: function (response) {
-			section1content = "<div> <ul class='nav nav-sidebar'> <li class='sidebarTitle'>" + response[0].value + "</li>";
+			section1title = "<div> <ul class='nav nav-sidebar'> <li class='sidebarTitle'>" + response[0].value + "</li>";
 		}
-	}); //gets services related to the product
+	});
 	$.ajax({
 		method: "POST"
 		, dataType: "json", //type of data
@@ -47,7 +48,7 @@ function buildSidebar(tablename, id) {
 		, success: function (response) {
 			if (response.length > 0) {
 				for (var i = 0; i < response.length; i++) {
-					section1content += "<li><a class='sidebarEntry' href='#'>" + response[i].name + "</a></li>";
+					section1content = "<li><a class='sidebarEntry' href='#'>" + response[i].name + "</a></li>";
 				}
 				section1content += "</ul>	</div>";
 			}
@@ -55,7 +56,7 @@ function buildSidebar(tablename, id) {
 				section1content = "";
 			}
 		}
-	}); //Gets the name of the section from db
+	});
 	$.ajax({
 		method: "POST"
 		, dataType: "json", //type of data
@@ -65,9 +66,9 @@ function buildSidebar(tablename, id) {
 			id: section2table
 		}
 		, success: function (response) {
-			section2content = "<div> <ul class='nav nav-sidebar'> <li class='sidebarTitle'>" + response[0].value + "</li>";
+			section2title = "<div> <ul class='nav nav-sidebar'> <li class='sidebarTitle'>" + response[0].value + "</li>";
 		}
-	}); //gets assistances related to the product
+	});
 	$.ajax({
 		method: "POST"
 		, dataType: "json", //type of data
@@ -80,7 +81,7 @@ function buildSidebar(tablename, id) {
 		, success: function (response) {
 			if (response.length > 0) {
 				for (var i = 0; i < response.length; i++) {
-					section2content += "<li><a class='sidebarEntry' href='#'>" + response[i].name + "</a></li>";
+					section2content = "<li><a class='sidebarEntry' href='#'>" + response[i].name + "</a></li>";
 				}
 				section2content += "</ul>	</div>";
 			}
@@ -91,13 +92,15 @@ function buildSidebar(tablename, id) {
 	});
 	$(document).ajaxStop(function () {
 		var sidebar = "";
-		if (section1content != "") {
+		if (!(section1content === "")) {
+			sidebar += section1title;
 			sidebar += section1content;
 		}
-		if (section2content != "") {
+		if (!(section2content === "")) {
+			sidebar += section2title;
 			sidebar += section2content;
 		}
 		sidebar += "<ul class='nav nav-sidebar'> <a id='back'> <li class='sidebarBack'>Indietro</li> </a> <script type='text/javascript'> $('#back').click(function () { window.history.back(); }); </script> </ul>";
-		$("#sidebarContainer").append(sidebar);
+		$("#sidebarContainer").html(sidebar);
 	});
 }
