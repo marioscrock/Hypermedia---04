@@ -188,6 +188,21 @@ body {
   }
 }
 
+.custom-bullet-highlights li {
+  display: block;
+  font-size: 24px;
+}
+
+.custom-bullet-highlights li:before {
+  content: "\e080";
+  font-family: 'Glyphicons Halflings';
+  font-size: 18px;
+  float: left;
+  margin-top: 5px;
+  margin-left: -35px;
+  color: #fe000d;
+}
+
 .custom-bullet li {
   display: block;
   font-size: 18px;
