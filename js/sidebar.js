@@ -32,6 +32,7 @@ function buildSidebar(tablename, id) {
 		section2pageurl = "servizio.html?id_serv=";
 		break;
 	}
+	//Gets the name of the section from db
 	$.ajax({
 		method: "POST"
 		, dataType: "json", //type of data
@@ -43,7 +44,7 @@ function buildSidebar(tablename, id) {
 		, success: function (response) {
 			section1title = "<div> <ul class='nav nav-sidebar'> <li class='sidebarTitle'>" + response[0].value + "</li>";
 		}
-	});
+	}); //gets services related to the product
 	$.ajax({
 		method: "POST"
 		, dataType: "json", //type of data
@@ -64,7 +65,7 @@ function buildSidebar(tablename, id) {
 				section1content = "";
 			}
 		}
-	});
+	}); //Gets the name of the section from db
 	$.ajax({
 		method: "POST"
 		, dataType: "json", //type of data
@@ -76,7 +77,7 @@ function buildSidebar(tablename, id) {
 		, success: function (response) {
 			section2title = "<div> <ul class='nav nav-sidebar'> <li class='sidebarTitle'>" + response[0].value + "</li>";
 		}
-	});
+	}); //gets assistances related to the product
 	$.ajax({
 		method: "POST"
 		, dataType: "json", //type of data
@@ -107,15 +108,11 @@ function buildSidebar(tablename, id) {
 	});
 	$(document).ajaxStop(function () {
 		var sidebar = "";
-		if (!(section1content === "")) {
-			sidebar += section1title;
-			sidebar += section1content;
-		}
-		if (!(section2content === "")) {
-			sidebar += section2title;
-			sidebar += section2content;
-		}
+		sidebar += section1title;
+		sidebar += section1content;
+		sidebar += section2title;
+		sidebar += section2content;
 		sidebar += "<ul class='nav nav-sidebar'> <a id='back'> <li class='sidebarBack'>Indietro</li> </a> <script type='text/javascript'> $('#back').click(function () { window.history.back(); }); </script> </ul>";
-		$("#sidebarContainer").html(sidebar);
+		$("#sidebarContainer").append(sidebar);
 	});
 }

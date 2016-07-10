@@ -1,29 +1,19 @@
 <?php
 
-
 header('Content-type: text/plain; charset=utf-8');
 
-
-//get all the course from db and reply using json structure
-
-//echo "I'm the php";
-
-//connection to db
 $mysqli = new mysqli("localhost", "root", "", "dbtim");
+
 if (mysqli_connect_errno()) { //verify connection
     echo "Error to connect to DBMS: ".mysqli_connect_error(); //notify error
     exit(); //do nothing else 
 }
 else {
     
-		/* change character set to utf8 */
-		$mysqli->set_charset("utf8");
+    $mysqli->set_charset("utf8");
     
-		# extract results mysqli_result::fetch_array
-    $query = " SELECT services.id_serv, services.name , services.img_bot , services.img_top , services.par_top , services.par_bot
-							 FROM services 
-				 			 WHERE (services.id_serv=".$_POST["id"].")";
-		//query execution
+    $query = "SELECT id_ass, title, category FROM assistances, assistance_subcategories WHERE highlights=1 && subcategory = id_ass_subcat";
+  
     $result = $mysqli->query($query);
 		if($result==FALSE) {
 			echo "no result";
@@ -38,11 +28,10 @@ else {
 			}
 		}
 	
-    //free result 
     $result->close();
 
-    //close connection
     $mysqli->close();
+  
 }
 
 ?>
