@@ -26,7 +26,22 @@
 				<div id="title" class="title"> </div>
 				<div class="redDivider"></div>
 				<div id="tiles" class="row placeholders">
-					<div class="col-xs-12 col-sm-4 col-lg-3"> </div>
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 tileContainer">
+						<div class="container-fluid tile">
+							<div class="imgContainer"><img src="img/prodotti/APPLE_IPAD_97.jpg" class="img-responsive" alt="Generic placeholder thumbnail"> </div>
+							<div class="btContainer">
+								<div class="item">
+									<p>" + response[i].name + "</p>
+								</div>
+								<div class="item itemPrice">
+									<p>" + response[i].price + "€</p>
+								</div>
+								<div class="item">
+									<button type="button" id="btn-detail" class="btn btn-primary" onclick="location.href = 'product.html?id= + response[i].id + "> Dettagli </button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
