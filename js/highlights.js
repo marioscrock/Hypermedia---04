@@ -25,7 +25,7 @@ function ready() {
       highlights += "<ul class='custom-bullet-highlights'>";
 
       for (var i = 0; i < response.length; i++) {
-        highlights += "<li><a href='assistenza.html?category=" + response[i].category + "&assistance=" + response[i].id_ass + "'>" + response[i].title + "</a></li>";
+        highlights += "<li><a href='assistenza.html?id=" + response[i].id_ass + "'>" + response[i].title + "</a></li>";
       }
 
       highlights += "</ul>";
