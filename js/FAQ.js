@@ -27,28 +27,7 @@ function ready() {
             console.log("Error");
         }
     });
-    $.ajax({
-        method: "POST"
-        , dataType: "json", //type of data
-        crossDomain: true, //localhost purposes
-        url: "/php/serviceData.php", //Relative or absolute path to file.php file
-        data: {
-            id: GET["id"]
-        }
-        , success: function (response) {
-            orientationSecond = "<li><a href='introductory.html?category=" + response[0].category + "&item=service_categories'>" + response[0].category_name + "</a></li><li class='active'>" + response[0].name + "</li>";
-            $(".sectionTitle").html(response[0].name);
-            $("#imgContainerTop").prepend("<img class='img-responsive' src=" + response[0].img_top + ">");
 
-            $("#imgContainerBot").prepend("<img class='img-responsive' src=" + response[0].img_bot + ">");
-            $("#presentation").html(response[0].par_top);
-            $("#specifications").html(response[0].par_bot);
-            $("#btn-form").append("<button type =\x22button\x22 onclick=\x22location.href = 'form-servizi.html?id=" + response[0].id_serv + "'\x22 >");
-        }
-        , error: function (request, error) {
-            console.log("Error");
-        }
-    });
     $.ajax({
         method: "POST"
         , dataType: "json", //type of data
@@ -58,12 +37,16 @@ function ready() {
             id: GET["id"]
         }
         , success: function (response) {
-            if (response[0].answer.length >= 0) {
-                var button = "";
-                button = "<div><button type =\x22button\x22 id=\x22btn-detail\x22 class=\x22btn btn-primary\x22 onclick=\x22location.href = 'FAQ.html?id=" + response[0].id_serv + "'\x22 > FAQ </button></div>";
-            }
 
-            $("#optionalFAQBUTTON").append(button);
+            orientationSecond = "<li><a href='introductory.html?category=" + response[0].category + "&item=service_categories'>" + response[0].category_name + "</a></li> <li><a href='servizio.html?id=" + response[0].id_serv + "&item=service_categories'>" + response[0].name + "</a></li> <li class='active'>FAQ " + response[0].name + "</li>";
+            $(".sectionTitle").html("FAQ di " + response[0].name);
+
+
+            var questions = "";
+            for (var i = 0; i < response.length; i++) {
+                questions += "<div class='row col-md-12'></div><div class='col-md-12  placeholder'><a align='left' style='font-size: 20px;' onclick='question(this," + response[i].id_faq + "," + GET["id"] + ")'><strong>" + response[i].question + "</strong></a></div></div>";
+            }
+            $("#questions").html(questions);
         }
         , error: function (request, error) {
             console.log("Error");
@@ -72,4 +55,34 @@ function ready() {
     $(document).ajaxStop(function () {
         $("#orientation").html(orientationFirst + orientationSecond);
     });
+}
+
+function question(e, id_faq, service) {
+
+    var element = e;
+
+    $.ajax({
+        method: "POST"
+        , dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "/php/servicesingleFAQ.php", //Relative or absolute path to file.php file
+        data: {
+            id: id_faq
+        }
+        , success: function (response) {
+
+            $(element).css({
+                "color": "#0b3d86"
+            });
+            $(element).parent().append("<p align ='left'><br>" + response[0].answer + "<br><br></p><div style='background-color: #0b3d86;' class='redDivider'></div>");
+            element.onclick = function () {
+                return false;
+            }
+
+        }
+        , error: function (request, error) {
+            console.log("Error");
+        }
+    });
+    return false; // return false so the browser will not scroll your page
 }
