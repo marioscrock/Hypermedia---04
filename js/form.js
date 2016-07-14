@@ -51,8 +51,8 @@ function ready() {
 		}
 		, success: function (response) {
 			orientationSecond = "<li><a href='introductory.html?category=" + response[0].category + "&item=product_categories'>" + response[0].category_name + "</a></li><li>" + response[0].name + "</li><li class='active'>Form</li>";
-			$("#title").html(response[0].name);
-			$("#price").append("<strong>" + response[0].price + "€</strong>");
+			$("#title").html("<strong>" + response[0].name + "</strong>");
+			$("#price").html("<strong>" + response[0].price + "€</strong>");
 		}
 		, error: function (request, error) {
 			console.log("Error");
