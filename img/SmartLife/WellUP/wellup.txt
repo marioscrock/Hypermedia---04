@@ -1,6 +1,0 @@
-DESCRIZIONE
-Un'app gratuita sviluppata come fosse un diario personale, per disporre in ogni momento di tutte le informazioni 
-sui controlli medici preventivi da effettuare periodicamente per sé e per tutta la famiglia
-
-ATTIVAZIONE E REGOLAMENTI
-L'applicazione è disponibile su Google Play Store e iTunes.
