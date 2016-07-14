@@ -40,11 +40,11 @@ function ready() {
             $(".sectionTitle").html(response[0].name);
             $("#imgContainerTop").prepend("<img class='img-responsive' src=" + response[0].img_top + ">");
             $("#servizioss").html(response[0].name);
-            $("#imgContainerBot").prepend("<img class='img-responsive' src=" + response[0].img_bot + ">");
+            $("#img_btn").html("<img class='img-responsive img-center' src=" + response[0].img_bot + ">");
             $("#presentation").html(response[0].par_top);
             $("#specifications").html(response[0].par_bot);
 
-            $("#btn-form").append("<button type =\x22button\x22 class=\x22btn btn-primary\x22 onclick=\x22location.href = 'form-servizi.html?id=" + response[0].id_serv + "'\x22 >Sottoscrivi Servizio<br> Maggiori Informazioni</button>");
+            $("#btn-form").html("<button type =\x22button\x22 class=\x22btn btn-primary center-block\x22 onclick=\x22location.href = 'form-servizi.html?id=" + response[0].id_serv + "'\x22 >Sottoscrivi Servizio<br> Maggiori Informazioni</button>");
         }
         , error: function (request, error) {
             console.log("Error");
@@ -61,10 +61,10 @@ function ready() {
         , success: function (response) {
             if (response[0].answer.length >= 0) {
                 var button = "";
-                button = "<div><button type =\x22button\x22 id=\x22btn-detail\x22 class=\x22btn btn-primary\x22 onclick=\x22location.href = 'FAQ.html?id=" + response[0].id_serv + "'\x22 > FAQ </button></div>";
+                button = "<div><button type =\x22button\x22 id=\x22btn-detail\x22 class=\x22btn btn-primary \x22 style=\x22margin-top:20px; \x22 onclick=\x22location.href = 'FAQ.html?id=" + response[0].id_serv + "'\x22 > FAQ </button></div>";
             }
 
-            $("#optionalFAQBUTTON").append(button);
+            $("#optionalFAQBUTTON").html(button);
         }
         , error: function (request, error) {
             console.log("Error");
