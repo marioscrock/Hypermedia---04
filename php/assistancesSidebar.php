@@ -30,7 +30,7 @@ else {
 			{
 				$array = array();
 				while($row = $result->fetch_assoc()) {
-					$array[]=array_map('utf8_encode',$row);
+					array_push($array, $row);
 				}
 				echo json_encode($array);
 			}
