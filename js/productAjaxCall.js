@@ -47,7 +47,7 @@ function ready() {
 				carousel += "<div class='item'> <img class='img-responsive' src=" + response[i].img + "> </div>";
 			}
 			carousel += "</div>	<!-- Left and right controls --> <a class='left carousel-control' href='#myCarousel' role='button' data-slide='prev'>	<span class='glyphicon glyphicon-chevron-left' aria-hidden='true'></span> <span class='sr-only'>Previous</span>	</a> <a class='right carousel-control' href='#myCarousel' role='button' data-slide='next'> <span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span>	<span class='sr-only'>Next</span>	</a> </div>";
-			var buyNowButton = "<button type='button' class='btn btn-primary' onclick=\x22location.href ='form-prodotti.html?id=" + GET["id"] + "'\x22>Acquista ora</button>";
+			var buyNowButton = "<button id='btn-buy' type='button' class='btn btn-primary' onclick=\x22location.href ='form-prodotti.html?id=" + GET["id"] + "'\x22>Acquista ora</button>";
 			$("#buyNowButton").html(buyNowButton);
 			$("#imgContainer").prepend(carousel);
 			$(".productPrice").html(response[0].price + "€");
