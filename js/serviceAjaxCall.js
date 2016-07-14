@@ -44,7 +44,8 @@ function ready() {
             $("#presentation").html(response[0].par_top);
             $("#specifications").html(response[0].par_bot);
 
-            $("#btn-form").html("<button type =\x22button\x22 class=\x22btn btn-primary center-block\x22 onclick=\x22location.href = 'form-servizi.html?id=" + response[0].id_serv + "'\x22 >Sottoscrivi Servizio<br> Maggiori Informazioni</button>");
+
+            $("#btn-form").html("<button type =\x22button\x22 id=\x22btn-detail\x22 class=\x22btn btn-primary center-block\x22 style=\x22width:100%\x22 onclick=\x22location.href = 'form-servizi.html?id=" + response[0].id_serv + "'\x22 >Sottoscrivi<br> Informazioni</button>");
         }
         , error: function (request, error) {
             console.log("Error");
@@ -61,8 +62,9 @@ function ready() {
         , success: function (response) {
             if (response[0].answer.length >= 0) {
                 var button = "";
-                button = "<div><button type =\x22button\x22 id=\x22btn-detail\x22 class=\x22btn btn-primary \x22 style=\x22margin-top:20px; \x22 onclick=\x22location.href = 'FAQ.html?id=" + response[0].id_serv + "'\x22 > FAQ </button></div>";
+                button = "<div><button type =\x22button\x22 id=\x22btn-detail\x22 class=\x22btn btn-primary btn-lg\x22 style=\x22margin-top:15px;width:100% \x22 onclick=\x22location.href = 'FAQ.html?id=" + response[0].id_serv + "'\x22 > FAQ </button></div>";
             }
+
 
             $("#optionalFAQBUTTON").html(button);
         }
