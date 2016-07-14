@@ -176,10 +176,6 @@ body {
 	margin: 15px 2px 15px 2px;
 }
 
-.tile > img {
-	width: 100%;
-}
-
 .wrapperBot {
 	width: 100%;
 	display: inline-block;
@@ -210,6 +206,10 @@ body {
 	bottom: 0;
 	right: 0;
 	left: 0;
+}
+
+.semiContainer > img {
+	width: 100%;
 }
 
 #btn-detail {

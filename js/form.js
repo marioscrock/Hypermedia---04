@@ -50,9 +50,10 @@ function ready() {
 			id: GET["id"]
 		}
 		, success: function (response) {
-			orientationSecond = "<li><a href='introductory.html?category=" + response[0].category + "&item=product_categories'>" + response[0].category_name + "</a></li><li>" + response[0].name + "</li><li class='active'>Form</li>";
+			orientationSecond = "<li><a href='introductory.html?category=" + response[0].category + "&item=product_categories'>" + response[0].category_name + "</a></li><li class='active'>" + response[0].name + "</li><li class='active'>Form</li>";
 			$("#title").html("<strong>" + response[0].name + "</strong>");
 			$("#price").html("<strong>" + response[0].price + "€</strong>");
+			$("#optionalFAQBUTTON").html("<button name='button3id' class='btn btn-inverse' onclick=\x22location.href='FAQ.html?id=" + GET["id"] + "'\x22 style='width: 100%; margin-left: 20px; margin-right: 20px;'>FAQ</button>");
 		}
 		, error: function (request, error) {
 			console.log("Error");
