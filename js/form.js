@@ -1,4 +1,7 @@
 $(document).ready(ready);
+$('#alert_invio').click(function () {
+	$('#invio').addClass('in'); // shows alert with Bootstrap CSS3 implem
+});
 
 function get() {
 	var GET = {};
@@ -53,7 +56,23 @@ function ready() {
 			orientationSecond = "<li><a href='introductory.html?category=" + response[0].category + "&item=product_categories'>" + response[0].category_name + "</a></li><li class='active'>" + response[0].name + "</li><li class='active'>Form</li>";
 			$("#title").html("<strong>" + response[0].name + "</strong>");
 			$("#price").html("<strong>" + response[0].price + "€</strong>");
-			$("#optionalFAQBUTTON").html("<button name='button3id' class='btn btn-inverse' onclick=\x22location.href='FAQ.html?id=" + GET["id"] + "'\x22 style='width: 100%; margin-left: 20px; margin-right: 20px;'>FAQ</button>");
+		}
+		, error: function (request, error) {
+			console.log("Error");
+		}
+	});
+	$.ajax({
+		method: "POST"
+		, dataType: "json", //type of data
+		crossDomain: true, //localhost purposes
+		url: "/php/serviceFAQ.php", //Relative or absolute path to file.php file
+		data: {
+			id: GET["id"]
+		}
+		, success: function (response) {
+			if (response.length >= 0) {
+				$("#optionalFAQBUTTON").html("<button name='button3id' class='btn btn-inverse' onclick=\x22location.href='FAQ.html?id=" + GET["id"] + "'\x22 style='width: 100%; margin-left: 20px; margin-right: 20px;'>FAQ</button>");
+			}
 		}
 		, error: function (request, error) {
 			console.log("Error");
