@@ -13,7 +13,6 @@ else {
 		/* change character set to utf8 */
 		$mysqli->set_charset("utf8");
     
-		# extract results mysqli_result::fetch_array
 		switch($_POST["table"]){
 			case "assistances" : 
     		$query = "SELECT assistances.title as name, assistances.id_ass as id, assistance_subcategories.category FROM products JOIN ass_prod JOIN assistances JOIN assistance_subcategories WHERE products.id_prod = ass_prod.id_prod && assistances.id_ass = ass_prod.id_ass && products.id_prod =" .$_POST["id"]." &&assistances.subcategory=assistance_subcategories.id_ass_subcat";
@@ -32,7 +31,7 @@ else {
 			{
 				$array = array();
 				while($row = $result->fetch_assoc()) {
-					array_push($array, $row);
+					$array[]=array_map('utf8_encode',$row);
 				}
 				echo json_encode($array);
 			}
