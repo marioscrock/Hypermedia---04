@@ -2,54 +2,38 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<title>Smartphone e telefoni</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="js/navbar.js" type="text/javascript"></script>
-	<script src="js/bootstrap.js" type="text/javascript"></script>
-	<script src="js/productsIntroductoryAjax.js" type="text/javascript"></script>
-	<script src="js/sidebarCategories.js" type="text/javascript"></script>
-	<script src="js/jquery.matchHeight.js" type="text/javascript"></script>
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/timElements.css" rel="stylesheet"> </head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Smartphone e telefoni</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/navbar.js" type="text/javascript"></script>
+  <script src="js/bootstrap.js" type="text/javascript"></script>
+  <script src="js/productsIntroductoryAjax.js" type="text/javascript"></script>
+  <script src="js/sidebarCategories.js" type="text/javascript"></script>
+  <script src="js/jquery.matchHeight.js" type="text/javascript"></script>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/timElements.css" rel="stylesheet"> </head>
 
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<!-- SIDEBAR -->
-			<div class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-				<ol id="orientation" class="breadcrumb" style="margin-bottom: 5px;"> </ol>
-				<div id="title" class="title"> </div>
-				<div class="redDivider"></div>
-				<div id="tiles" class="row placeholders">
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 tileContainer">
-						<div class="container-fluid tile">
-							<div class="imgContainer"><img src="img/prodotti/APPLE_IPAD_97.jpg" class="img-responsive" alt="Generic placeholder thumbnail"> </div>
-							<div class="btContainer">
-								<div class="item">
-									<p>" + response[i].name + "</p>
-								</div>
-								<div class="item itemPrice">
-									<p>" + response[i].price + "€</p>
-								</div>
-								<div class="item">
-									<button type="button" id="btn-detail" class="btn btn-primary" onclick="location.href = 'product.html?id= + response[i].id + "> Dettagli </button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-xs-12 col-sm-3 col-md-2 sidebar">
-		<ul id="sidebarCategories" class="nav nav-sidebar"> </ul>
-	</div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <ol id="orientation" class="breadcrumb" style="margin-bottom: 5px;"> </ol>
+        <div id="title" class="title"> </div>
+        <div class="redDivider"></div>
+        <div id="tiles" class="row placeholders">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
+    <ul id="sidebarCategories" class="nav nav-sidebar"> </ul>
+  </div>
 </body>
 
 </html>
