@@ -13,7 +13,7 @@ function ready() {
 		method: "POST"
 		, dataType: "json", //type of data
 		crossDomain: true, //localhost purposes
-		url: "/php/promoData.php", //Relative or absolute path to file.php file
+		url: "http://hyppolenghiscroccavendra.altervista.org/php/promoData.php", //Relative or absolute path to file.php file
 		data: {
 			item: GET["item"]
 		}

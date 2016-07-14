@@ -16,7 +16,7 @@ function ready() {
     method: "POST"
     , dataType: "json", //type of data
     crossDomain: true, //localhost purposes
-    url: "/php/stringData.php", //Relative or absolute path to file.php file
+    url: "http://hyppolenghiscroccavendra.altervista.org/php/stringData.php", //Relative or absolute path to file.php file
     data: {
       id: "assistance_categories"
     }
@@ -30,7 +30,7 @@ function ready() {
     method: "POST"
     , dataType: "json", //type of data
     crossDomain: true, //localhost purposes
-    url: "/php/assistanceData.php", //Relative or absolute path to file.php file
+    url: "http://hyppolenghiscroccavendra.altervista.org/php/assistanceData.php", //Relative or absolute path to file.php file
     data: {
       id: GET["id"]
     }
@@ -56,7 +56,7 @@ function ready() {
     method: "POST"
     , dataType: "json", //type of data
     crossDomain: true, //localhost purposes
-    url: "/php/assistanceFAQ.php", //Relative or absolute path to file.php file
+    url: "http://hyppolenghiscroccavendra.altervista.org/php/assistanceFAQ.php", //Relative or absolute path to file.php file
     data: {
       id: GET["id"]
     }
@@ -81,7 +81,7 @@ function question(e, id_qa, id_ass) {
     method: "POST"
     , dataType: "json", //type of data
     crossDomain: true, //localhost purposes
-    url: "/php/assistanceFAQsingle.php", //Relative or absolute path to file.php file
+    url: "http://hyppolenghiscroccavendra.altervista.org/php/assistanceFAQsingle.php", //Relative or absolute path to file.php file
     data: {
       id: id_qa
     }

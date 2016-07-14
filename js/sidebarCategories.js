@@ -17,7 +17,7 @@ function ready() {
 		method: "POST"
 		, dataType: "json", //type of data
 		crossDomain: true, //localhost purposes
-		url: "/php/stringData.php", //Relative or absolute path to file.php file
+		url: "http://hyppolenghiscroccavendra.altervista.org/php/stringData.php", //Relative or absolute path to file.php file
 		data: {
 			id: GET["item"]
 		}
@@ -32,7 +32,7 @@ function ready() {
 		method: "POST"
 		, dataType: "json", //type of data
 		crossDomain: true, //localhost purposes
-		url: "/php/categoriesIntrodData.php", //Relative or absolute path to file.php file
+		url: "http://hyppolenghiscroccavendra.altervista.org/php/categoriesIntrodData.php", //Relative or absolute path to file.php file
 		data: {
 			id: GET["item"]
 		}

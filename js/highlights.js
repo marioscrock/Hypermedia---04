@@ -17,7 +17,7 @@ function ready() {
     method: "GET"
     , dataType: "json", //type of data
     crossDomain: true, //localhost purposes
-    url: "/php/highlights.php", //Relative or absolute path to file.php file
+    url: "http://hyppolenghiscroccavendra.altervista.org/php/highlights.php", //Relative or absolute path to file.php file
     success: function (response) {
 
       var highlights = "";

@@ -48,7 +48,7 @@ function buildSidebar(tablename, id) {
     method: "POST"
     , dataType: "json", //type of data
     crossDomain: true, //localhost purposes
-    url: "/php/stringData.php", //Relative or absolute path to file.php file
+    url: "http://hyppolenghiscroccavendra.altervista.org/php/stringData.php", //Relative or absolute path to file.php file
     data: {
       id: section1table
     }
@@ -60,7 +60,7 @@ function buildSidebar(tablename, id) {
     method: "POST"
     , dataType: "json", //type of data
     crossDomain: true, //localhost purposes
-    url: "/php/" + phpFileName, //Relative or absolute path to file.php file
+    url: "http://hyppolenghiscroccavendra.altervista.org/php/" + phpFileName, //Relative or absolute path to file.php file
     data: {
       table: section1table
       , id: id
@@ -80,7 +80,7 @@ function buildSidebar(tablename, id) {
     method: "POST"
     , dataType: "json", //type of data
     crossDomain: true, //localhost purposes
-    url: "/php/stringData.php", //Relative or absolute path to file.php file
+    url: "http://hyppolenghiscroccavendra.altervista.org/php/stringData.php", //Relative or absolute path to file.php file
     data: {
       id: section2table
     }
@@ -92,7 +92,7 @@ function buildSidebar(tablename, id) {
     method: "POST"
     , dataType: "json", //type of data
     crossDomain: true, //localhost purposes
-    url: "/php/" + phpFileName, //Relative or absolute path to file.php file
+    url: "http://hyppolenghiscroccavendra.altervista.org/php/" + phpFileName, //Relative or absolute path to file.php file
     data: {
       table: section2table
       , id: id
