@@ -3,11 +3,6 @@
 
 header('Content-type: text/plain; charset=utf-8');
 
-
-//get all the course from db and reply using json structure
-
-//echo "I'm the php";
-
 //connection to db
 $mysqli = new mysqli("localhost", "root", "", "dbtim");
 if (mysqli_connect_errno()) { //verify connection
@@ -30,7 +25,7 @@ else {
 			{
 				$array = array();
 				while($row = $result->fetch_assoc()) {
-					array_push($array, $row);
+					$array[]=array_map('utf8_encode',$row);
 				}
 				echo json_encode($array);
 			}

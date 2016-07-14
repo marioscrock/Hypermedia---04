@@ -22,7 +22,7 @@ else {
 			{
 				$array = array();
 				while($row = $result->fetch_assoc()) {
-					array_push($array, $row);
+					$array[]=array_map('utf8_encode',$row);
 				}
 				echo json_encode($array);
 			}

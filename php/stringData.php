@@ -14,8 +14,8 @@ else {
 		/* change character set to utf8 */
 		$mysqli->set_charset("utf8");
     
-		# extract results mysqli_result::fetch_array
     $query = " SELECT * FROM strings WHERE key_string ='". $_POST["id"] ."'";
+  
 		//query execution
     $result = $mysqli->query($query);
 		if($result==FALSE) {
@@ -25,7 +25,7 @@ else {
 			{
 				$array = array();
 				while($row = $result->fetch_assoc()) {
-					array_push($array, $row);
+					$array[]=array_map('utf8_encode',$row);
 				}
 				echo json_encode($array);
 			}

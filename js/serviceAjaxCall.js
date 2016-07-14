@@ -73,4 +73,5 @@ function ready() {
     $(document).ajaxStop(function () {
         $("#orientation").html(orientationFirst + orientationSecond);
     });
+
 }
