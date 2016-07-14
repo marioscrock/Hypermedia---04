@@ -124,6 +124,7 @@ function buildSidebar(tablename, id) {
 			sidebar += "<ul class='nav nav-sidebar'> <a id='back' onclick='back()'> <li class='sidebarBack'>Indietro</li> </a></ul>";
 		}
 		$("#sidebarContainer").append(sidebar);
+		$(this).unbind("ajaxStop");
 	});
 }
 
