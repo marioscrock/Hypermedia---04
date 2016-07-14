@@ -18,7 +18,7 @@ function ready() {
   var orientationSecond = "";
   var phpFileName = "";
   var itemType = "";
-  if (window.location.pathname.substring(1) === "form-prodotti.html") {
+  if (location.pathname.includes("form-prodotti.html")) {
     phpFileName = "productData.php";
     itemType = "product_categories";
   } else {
