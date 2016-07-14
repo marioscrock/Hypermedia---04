@@ -2,7 +2,7 @@
 
 header('Content-type: text/plain; charset=utf-8');
 
-$mysqli = new mysqli("localhost", "root", "", "hyppolenghiscroccavendra");
+$mysqli = new mysqli("localhost", "root", "", "my_hyppolenghiscroccavendra");
 
 if (mysqli_connect_errno()) { //verify connection
     echo "Error to connect to DBMS: ".mysqli_connect_error(); //notify error
