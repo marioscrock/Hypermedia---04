@@ -67,7 +67,7 @@ function ready() {
     }
     , success: function (response) {
       if (response.length >= 0) {
-        $("#optionalFAQBUTTON").html("<button name='button3id' class='btn btn-inverse' onclick=\x22location.href='FAQ.html?id=" + GET["id"] + "'\x22 style='width: 100%; margin-left: 20px; margin-right: 20px; padding-top: 5px;'>FAQ</button>");
+        $("#optionalFAQBUTTON").html("<button name='button3id' class='btn btn-inverse' onclick=\x22location.href='FAQ.html?id=" + GET["id"] + "'\x22 style='width: 100%; margin-top: 10px;'>FAQ</button>");
       }
     }
     , error: function (request, error) {
