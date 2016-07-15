@@ -120,7 +120,7 @@ function buildSidebar(tablename, id) {
 			sidebar += section2title;
 			sidebar += section2content;
 		}
-		if (!(GET["backpage"] === "")) {
+		if (!(GET["backpage"] === undefined)) {
 			sidebar += "<ul class='nav nav-sidebar'> <a id='back' onclick='back()'> <li class='sidebarBack'>Indietro</li> </a></ul>";
 		}
 		$("#sidebarContainer").append(sidebar);
@@ -145,10 +145,10 @@ function back() {
 		}
 		else {
 			if (GET["backpage"].includes("servizio.html")) {
-				backpage = "servizio.html" + "?id=" + GET["backid"];
+				href = "servizio.html" + "?id=" + GET["backid"];
 			}
 			else {
-				backpage = "assistenza.html" + "?id=" + GET["backid"];
+				href = "assistenza.html" + "?id=" + GET["backid"];
 			}
 		}
 		if (location.pathname.includes("product.html")) {

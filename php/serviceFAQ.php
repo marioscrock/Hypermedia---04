@@ -2,6 +2,7 @@
 
 
 header('Content-type: text/plain; charset=utf-8');
+header('Access-Control-Allow-Origin: *');
 
 //connection to db
 $mysqli = new mysqli("localhost", "root", "", "my_hyppolenghiscroccavendra");
