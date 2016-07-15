@@ -137,7 +137,7 @@ function back() {
 		var param = query[i].split("=");
 		GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
 	}
-	if (!(GET["backpage"] === "")) {
+	if (!(GET["backpage"].includes("product.html") || GET["backpage"].includes("servizio.html") || GET["backpage"].includes("assistenza.html"))) {
 		var href = ""; /*GET["backpage"] + "?id=" + GET["backid"];*/
 		var backpage;
 		if (GET["backpage"].includes("product.html")) {
