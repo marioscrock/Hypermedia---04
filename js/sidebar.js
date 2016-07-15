@@ -137,7 +137,19 @@ function back() {
   }
   if (!(GET["backpage"] === "")) {
     var href = GET["backpage"] + "?id=" + GET["backid"];
-    href += "&backpage=" + location.pathname.substring(1) + "&backid=" + globalId;
+    var backpage;
+
+    if (location.pathname.includes("product.html")) {
+      backpage = "product.html";
+    } else {
+      if (location.pathname.includes("servizio.html")) {
+        backpage = "servizio.html";
+      } else {
+        backpage = "assistenza.html";
+      }
+    }
+
+    href += "&backpage=" + backpage + "&backid=" + globalId;
     location.href = href;
   }
 }
