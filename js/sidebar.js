@@ -120,7 +120,7 @@ function buildSidebar(tablename, id) {
 			sidebar += section2title;
 			sidebar += section2content;
 		}
-		if (GET["backpage"].includes("product.html") || GET["backpage"].includes("servizio.html") || GET["backpage"].includes("assistenza.html")) {
+		if (((GET["backpage"].includes("product.html")) || (GET["backpage"].includes("servizio.html")) || (GET["backpage"].includes("assistenza.html")))) {
 			sidebar += "<ul class='nav nav-sidebar'> <a id='back' onclick='back()'> <li class='sidebarBack'>Indietro</li> </a></ul>";
 		}
 		$("#sidebarContainer").append(sidebar);
