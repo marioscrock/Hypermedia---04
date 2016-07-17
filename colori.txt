@@ -1,2 +1,0 @@
-Blu: 0b3d86
-Rosso:fe000d
