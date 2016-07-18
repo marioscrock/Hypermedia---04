@@ -1,4 +1,5 @@
-TIM website project
+<b>Progetto di Hypermedia Applications (Web and Multimedia)</b></br>
+<b>TIM website project</b></br>
 gruppo: <b>Polenghi Alessandro</b>, <b>Scrocca Mario</b>, <b>Vendra Moreno Raimondo</b>
 
 Abbiamo costruito la struttura delle pagine del nostro sito, basandoci su alcuni template forniti dal framework <b>Bootstrap</b>; ciò ci ha permesso di organizzare agilmente delle pagine responsive, che fossero fruibili anche su dispositivi mobile quali smartphone e tablet.<br> Oltre a poter visitare il sito dal browser dei loro cellulari, gli utenti potranno anche accedere all’applicazione <b>PhoneGap</b> per smartphone Android che permette la navigazione del sito allo stesso modo.<br><br>
