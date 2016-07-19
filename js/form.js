@@ -81,9 +81,11 @@ function ready() {
 
 function back() {
   var GET = get();
-  if (location.pathname.substring(1) === "form-prodotti.html") {
+
+  if (location.pathname.includes("form-prodotti.html")) {
     location.href = "product.html?id=" + GET["id"];
   } else {
     location.href = "servizio.html?id=" + GET["id"];
   }
+
 }
